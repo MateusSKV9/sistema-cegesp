@@ -7,14 +7,17 @@
 
 body {
     box-sizing: border-box;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: gray;
 }
 
 .cabecalho {
-    width: 100%;
-    background-color: red;
-    padding: 20px 20px;
     display: flex; 
     justify-content: center; 
+    background-color: red;
+    padding: 20px 20px;
 }
 
 .cabecalho__menu {
@@ -47,7 +50,7 @@ body {
     display: none; /* Esconde o submenu por padrão */
     position: absolute;
     top: 100%; /* Posiciona o submenu logo abaixo do item principal */
-    left: 0;
+    left: 0; 
     list-style: none;
     background-color: #fff;
     padding: 10px;
