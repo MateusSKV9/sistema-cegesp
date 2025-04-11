@@ -10,25 +10,42 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
-    background-color: gray;
+    background-color: #F5F5F5;
+    color: #002855; /* Cor principal do texto */
 }
 
 .cabecalho {
     display: flex; 
     justify-content: center; 
-    background-color: red;
-    padding: 20px 20px;
+    padding: 0px 20px;
 }
 
 .cabecalho__menu {
     display: flex;
+    flex-direction: column;
     justify-content: center;   
     align-items: center;
-    max-width: 1200px;
     width: 100%; 
-    gap: 40px;
     text-align: center;
 }
+
+.cabecalho__menu__container {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(90deg, #002855, #004080); /* Gradiente azul */
+    padding: 10px 15px;
+    gap: 30px;
+    color: #FFFFFF; /* Texto branco */
+}
+
+.cabecalho__menu__container img {
+    background-color: #FFFFFF; /* Fundo branco */
+    border-radius: 50%; /* Opcional: deixa o fundo arredondado */
+
+    width: 100px; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
 
 .menu-principal {
     display: flex;
@@ -44,6 +61,15 @@ body {
     cursor: pointer;
     padding: 10px 15px; 
     font-size: 20px; 
+    color: #FFFFFF; /* Texto branco */
+}
+
+.menu-item:hover {
+    color: #E63946; /* Destaque vermelho ao passar o mouse */
+}
+
+.menu-item:hover .submenu {
+    display: block; /* Mostra o submenu ao passar o mouse */
 }
 
 .submenu {
@@ -52,13 +78,10 @@ body {
     top: 100%; /* Posiciona o submenu logo abaixo do item principal */
     left: 0; 
     list-style: none;
-    background-color: #fff;
+    background-color: #FFFFFF;
     padding: 10px;
     margin: 0;
-}
-
-.menu-item:hover .submenu {
-    display: block; /* Mostra o submenu ao passar o mouse */
+    border: 1px solid #B0B0B0;
 }
 
 .submenu li {
@@ -67,10 +90,27 @@ body {
 
 .submenu li a {
     text-decoration: none;
-    color: #000;
+    color: #002855; /* Azul escuro */
     font-size: 20px;
 }
 
 .submenu li a:hover {
-    color: #007BFF; /* Cor ao passar o mouse sobre o link */
+    color: #E63946; /* Destaque vermelho */
 }
+
+.intro-section {
+    width: 100%;
+    font-size: 3rem;
+    text-decoration-color: white;
+    text-align: center;
+    background-image: url('assets/japan-urban-landscape-with-traffic.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área da div */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: #FFFFFF; /* Ajuste a cor do texto para contraste, se necessário */
+    padding: 200px 15px;
+    background-color: rgba(0, 40, 85, 0.8); /* Azul escuro com transparência */
+}
+
+
+
