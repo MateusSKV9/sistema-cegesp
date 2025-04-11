@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1006px) {
+	header {
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 857px) {
+	#home {
+		background-image: url(../assets/images/home-background.jpg) no-repeat center center/cover;
+	}
+
+	#mobile-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 857px) {
+	header {
+		flex-direction: column;
+	}
+
+	header nav {
+		display: flex;
+		border-radius: 5px;
+		box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+	}
+
+	.container-logo {
+		align-self: flex-start;
+	}
+
+	.nav-group {
+		display: none;
+		flex-direction: column;
+	}
+
+	.nav-header {
+		flex-direction: column;
+		gap: 0px;
+	}
+
+	.nav-header li {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.nav-header li:not(:last-of-type) {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	#mobile-menu {
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		font-size: 1.5em;
+		transition: all 0.15s ease;
+		padding: 5px;
+	}
+
+	#mobile-menu:hover {
+		cursor: pointer;
+		color: red;
+		font-size: 1.6em;
+	}
+
+	#mobile-menu:active {
+		transform: scale(0.98);
+	}
+
+	#menu-toggle:checked ~ .nav-group {
+		display: flex;
+	}
+
+	#about-menu,
+	#news-menu {
+		width: 90%;
+		gap: 0px;
+		padding: 10px 20px;
+	}
+
+	.menu-icon {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		width: 30px;
+		height: 26px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		z-index: 2;
+	}
+
+	.menu-icon span {
+		display: block;
+		height: 3px;
+		background: #333;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+
+	.menu-icon:hover span:nth-child(1),
+	.menu-icon:hover span:nth-child(2),
+	.menu-icon:hover span:nth-child(3) {
+		background-color: var(--red);
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(1) {
+		width: 34px;
+		transform: rotate(47deg) translateY(13px) translateX(6px);
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(2) {
+		opacity: 0;
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(3) {
+		width: 35px;
+		transform: rotate(-49deg) translateY(-11px) translateX(4px);
+	}
+
+	#about-menu::before,
+	#news-menu::before {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#home {
+		font-size: 0.85em;
+	}
+}
