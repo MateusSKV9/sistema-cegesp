@@ -9,9 +9,9 @@ body {
     box-sizing: border-box;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 15px;
-    background-color: #F5F5F5;
-    color: #002855; /* Cor principal do texto */
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #E8E8E8, #D6D6D6);
+    color: #002855; 
 }
 
 .cabecalho {
@@ -27,29 +27,29 @@ body {
     align-items: center;
     width: 100%; 
     text-align: center;
+
 }
 
 .cabecalho__menu__container {
     display: flex;
+    justify-content: space-around;
     width: 100%;
-    background: linear-gradient(90deg, #002855, #004080); /* Gradiente azul */
+    background: linear-gradient(90deg, #002855, #004080); 
     padding: 10px 15px;
-    gap: 30px;
-    color: #FFFFFF; /* Texto branco */
+    color: #FFFFFF; 
 }
 
 .cabecalho__menu__container img {
-    background-color: #FFFFFF; /* Fundo branco */
-    border-radius: 50%; /* Opcional: deixa o fundo arredondado */
-
-    width: 100px; /* Ajuste o tamanho da imagem */
-    height: auto; /* Mantém a proporção */
+    background-color: #FFFFFF; 
+    border-radius: 50%; /* deixa o fundo arredondado */
+    width: 100px; 
+    height: auto; 
 }
 
 
 .menu-principal {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 30px;
     list-style: none;
     margin: 0;
@@ -61,15 +61,15 @@ body {
     cursor: pointer;
     padding: 10px 15px; 
     font-size: 20px; 
-    color: #FFFFFF; /* Texto branco */
+    color: #FFFFFF;
 }
 
 .menu-item:hover {
-    color: #E63946; /* Destaque vermelho ao passar o mouse */
+    color: #E63946; 
 }
 
 .menu-item:hover .submenu {
-    display: block; /* Mostra o submenu ao passar o mouse */
+    display: block; 
 }
 
 .submenu {
@@ -90,12 +90,12 @@ body {
 
 .submenu li a {
     text-decoration: none;
-    color: #002855; /* Azul escuro */
+    color: #002855; 
     font-size: 20px;
 }
 
 .submenu li a:hover {
-    color: #E63946; /* Destaque vermelho */
+    color: #E63946; 
 }
 
 .intro-section {
@@ -103,13 +103,26 @@ body {
     font-size: 3rem;
     text-decoration-color: white;
     text-align: center;
-    background-image: url('assets/japan-urban-landscape-with-traffic.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('assets/japan-urban-landscape-with-traffic.jpg');
     background-size: cover; /* Ajusta a imagem para cobrir toda a área da div */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    color: #FFFFFF; /* Ajuste a cor do texto para contraste, se necessário */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #FFFFFF; 
     padding: 200px 15px;
-    background-color: rgba(0, 40, 85, 0.8); /* Azul escuro com transparência */
+    background-color: rgba(0, 40, 85, 0.8);
+}
+
+main {
+    max-width: 100%; 
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #FFFFFF; 
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 15px;
+    border-radius: 7px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
 }
 
 
