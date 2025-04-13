@@ -17,7 +17,7 @@ body {
 .cabecalho {
     display: flex; 
     justify-content: center; 
-    padding: 0px 20px;
+    padding: 0px 15px;
 }
 
 .cabecalho__menu {
@@ -25,9 +25,8 @@ body {
     flex-direction: column;
     justify-content: center;   
     align-items: center;
-    width: 100%; 
+    max-width: 100%; 
     text-align: center;
-
 }
 
 .cabecalho__menu__container {
@@ -39,10 +38,19 @@ body {
     color: #FFFFFF; 
 }
 
+.logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem; 
+    font-family: 'Montserrat', sans-serif;
+}
+
 .cabecalho__menu__container img {
     background-color: #FFFFFF; 
     border-radius: 50%; /* deixa o fundo arredondado */
-    width: 100px; 
+    width: 60px; 
     height: auto; 
 }
 
@@ -50,7 +58,7 @@ body {
 .menu-principal {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -60,7 +68,7 @@ body {
     position: relative; /* Necessário para posicionar o submenu */
     cursor: pointer;
     padding: 10px 15px; 
-    font-size: 20px; 
+    font-size: 1.063rem;
     color: #FFFFFF;
 }
 
@@ -91,7 +99,7 @@ body {
 .submenu li a {
     text-decoration: none;
     color: #002855; 
-    font-size: 20px;
+    font-size: 1rem;;
 }
 
 .submenu li a:hover {
@@ -102,6 +110,7 @@ body {
     width: 100%;
     font-size: 3rem;
     text-decoration-color: white;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     background-image: url('assets/japan-urban-landscape-with-traffic.jpg');
     background-size: cover; /* Ajusta a imagem para cobrir toda a área da div */
