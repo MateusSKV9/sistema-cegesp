@@ -27,7 +27,7 @@ a {
 html {
 	display: flex;
 	justify-content: center;
-	background-color: rgb(198, 198, 198);
+	background-color: rgb(202, 200, 200);
 	scroll-behavior: smooth;
 }
 
@@ -68,13 +68,13 @@ header {
 }
 
 #logo span {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	font-weight: bold;
 	color: var(--midlle-blue);
 }
 
 #logo img {
-	width: 40px;
+	width: 45px;
 }
 
 .nav-header {
@@ -149,6 +149,11 @@ header {
 	padding: 12px 20px;
 	top: 100%;
 	z-index: 2;
+}
+
+#about-menu li,
+#news-menu li {
+  text-align: center;
 }
 
 #about-menu::before,
