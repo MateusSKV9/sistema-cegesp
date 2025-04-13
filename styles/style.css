@@ -153,10 +153,30 @@ header {
 
 #about-menu li,
 #news-menu li {
-  text-align: center;
+	text-align: center;
 }
 
-#about-menu::before,
+#about a,
+#news a {
+	display: flex;
+	align-items: center;
+  gap: 5px;
+}
+
+#about i,
+#news i {
+  color: #566480;
+	transition: all 0.1s ease;
+	font-size: 0.8em;
+}
+
+#about:hover i,
+#news:hover i {
+	transform: translateY(2px);
+  color: var(--high-blue);
+}
+
+/* #about-menu::before,
 #news-menu::before {
 	content: "";
 	position: absolute;
@@ -167,7 +187,7 @@ header {
 	border: 7px solid var(--high-blue);
 	border-color: transparent transparent var(--dark-blue);
 	z-index: -999;
-}
+} */
 
 #about-menu li:hover,
 #news-menu li:hover {
