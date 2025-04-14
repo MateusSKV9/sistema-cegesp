@@ -33,10 +33,16 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 30px;
-    width: 100%;
+    width: 100%; 
+    max-width: 1140px; 
     background: linear-gradient(90deg, #002855, #004080); 
-    padding: 0.87% 1.31%;
+    padding: 0.87% 0%;
     color: #FFFFFF; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    margin: 0 auto; 
 }
 
 
@@ -136,20 +142,18 @@ body {
     background-repeat: no-repeat; 
     color: #FFFFFF; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra do texto para melhor legibilidade */
-    padding: 200px 1.31%;
+    padding: 300px 1.31%;
     background-color: rgba(0, 40, 85, 0.8);
 }
 
 main {
     max-width: 100%; 
-    margin: 20px auto; 
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: #FFFFFF; 
     font-family: 'Poppins', sans-serif;
     padding: 10px 15px;
-    border-radius: 7px; 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
 }
 
