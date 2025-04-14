@@ -17,7 +17,7 @@ body {
 .cabecalho {
     display: flex; 
     justify-content: center; 
-    padding: 0px 15px;
+    padding: 0% 1.31%;
 }
 
 .cabecalho__menu {
@@ -32,10 +32,19 @@ body {
 .cabecalho__menu__container {
     display: flex;
     justify-content: space-around;
+    gap: 30px;
     width: 100%;
     background: linear-gradient(90deg, #002855, #004080); 
-    padding: 10px 15px;
+    padding: 0.87% 1.31%;
     color: #FFFFFF; 
+}
+
+
+.cabecalho__menu__container img {
+    background-color: #FFFFFF; 
+    border-radius: 50%; /* deixa o fundo arredondado */
+    width: 60px; 
+    height: auto; 
 }
 
 .logo__container {
@@ -47,28 +56,34 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.cabecalho__menu__container img {
-    background-color: #FFFFFF; 
-    border-radius: 50%; /* deixa o fundo arredondado */
-    width: 60px; 
-    height: auto; 
-}
-
-
 .menu-principal {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
+.menu-principal input[type="button"] {
+    background-color: #004080; 
+    color: #FFFFFF; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 1rem;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-principal input[type="button"]:hover {
+    background-color: #E63946; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+}
 .menu-item {
     position: relative; /* Necessário para posicionar o submenu */
     cursor: pointer;
     padding: 10px 15px; 
-    font-size: 1.063rem;
+    font-size: 1rem;
     color: #FFFFFF;
 }
 
@@ -80,6 +95,8 @@ body {
     display: block; 
 }
 
+
+
 .submenu {
     display: none; /* Esconde o submenu por padrão */
     position: absolute;
@@ -87,8 +104,9 @@ body {
     left: 0; 
     list-style: none;
     background-color: #FFFFFF;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
+    border-radius: 7px; 
     border: 1px solid #B0B0B0;
 }
 
@@ -117,7 +135,8 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
     color: #FFFFFF; 
-    padding: 200px 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra do texto para melhor legibilidade */
+    padding: 200px 1.31%;
     background-color: rgba(0, 40, 85, 0.8);
 }
 
