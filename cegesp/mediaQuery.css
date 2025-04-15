@@ -1,6 +1,7 @@
 @media (max-width: 650px) {
   /*------------MENU*/
   .menu {
+    position: static;
     flex-direction: column;
     align-items: center;
     padding: 1px;
