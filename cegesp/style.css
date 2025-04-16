@@ -2,7 +2,7 @@
 @import url("https://fonts.cdnfonts.com/css/avenir");
 :root {
   --azul-escuro: #0d115e;
-  --azul: #5785e1;
+  --azul: #91bfff;
 }
 
 * {
@@ -152,4 +152,5 @@ body {
 
 main {
   padding: 25px 40px;
+  max-width: 1400px;
 }
