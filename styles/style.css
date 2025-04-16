@@ -1,4 +1,16 @@
+:root {
+    --color-primary: #002855;
+    --color-secondary: #004080;
+    --color-accent: #E63946;
+    --color-light: #FFFFFF;
+    --color-gray-light: #E8E8E8;
+    --color-gray-dark: #D6D6D6;
+    --color-border: #B0B0B0;
 
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --font-tertiary: 'Poppins', sans-serif;
+}
 
 * {
     margin: 0;
@@ -9,9 +21,9 @@ body {
     box-sizing: border-box;
     max-width: 1140px;
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(180deg, #E8E8E8, #D6D6D6);
-    color: #002855; 
+    font-family: var(--font-primary);
+    background: linear-gradient(180deg, var(--color-gray-light), var(--color-gray-dark));
+    color: var(--color-primary); 
 }
 
 .cabecalho {
@@ -35,9 +47,9 @@ body {
     gap: 30px;
     width: 100%;
     max-width: 1140px; 
-    background: linear-gradient(90deg, #002855, #004080); 
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); 
     padding: 0.87% 0%;
-    color: #FFFFFF; 
+    color: var(--color-light); 
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -46,9 +58,8 @@ body {
     z-index: 1000; 
 }
 
-
 .cabecalho__menu__container img {
-    background-color: #FFFFFF; 
+    background-color: var(--color-light); 
     border-radius: 50%; /* deixa o fundo arredondado */
     width: 60px; 
     height: auto; 
@@ -60,7 +71,7 @@ body {
     align-items: center;
     gap: 10px;
     font-size: 1.5rem; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-secondary);
 }
 
 .menu-principal {
@@ -71,8 +82,8 @@ body {
 }
 
 .menu-principal input[type="button"] {
-    background-color: #004080; 
-    color: #FFFFFF; 
+    background-color: var(--color-secondary); 
+    color: var(--color-light); 
     border: none; 
     border-radius: 5px; 
     padding: 10px 20px; 
@@ -82,26 +93,25 @@ body {
 }
 
 .menu-principal input[type="button"]:hover {
-    background-color: #E63946; 
+    background-color: var(--color-accent); 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
 }
+
 .menu-item {
     position: relative; /* Necessário para posicionar o submenu */
     cursor: pointer;
     padding: 10px 15px; 
     font-size: 1rem;
-    color: #FFFFFF;
+    color: var(--color-light);
 }
 
 .menu-item:hover {
-    color: #E63946; 
+    color: var(--color-accent); 
 }
 
 .menu-item:hover .submenu {
     display: block; 
 }
-
-
 
 .submenu {
     display: none; /* Esconde o submenu por padrão */
@@ -109,11 +119,11 @@ body {
     top: 100%; /* Posiciona o submenu logo abaixo do item principal */
     left: 0; 
     list-style: none;
-    background-color: #FFFFFF;
+    background-color: var(--color-light);
     padding: 5px;
     margin: 0;
     border-radius: 7px; 
-    border: 1px solid #B0B0B0;
+    border: 1px solid var(--color-border);
 }
 
 .submenu li {
@@ -122,25 +132,25 @@ body {
 
 .submenu li a {
     text-decoration: none;
-    color: #002855; 
-    font-size: 1rem;;
+    color: var(--color-primary); 
+    font-size: 1rem;
 }
 
 .submenu li a:hover {
-    color: #E63946; 
+    color: var(--color-accent); 
 }
 
 .intro-section {
     width: 100%;
     font-size: 3rem;
-    text-decoration-color: white;
-    font-family: 'Montserrat', sans-serif;
+    text-decoration-color: var(--color-light);
+    font-family: var(--font-secondary);
     text-align: center;
-    background-image: url('assets/japan-urban-landscape-with-traffic.jpg');
+    background-image: url('/assets/japan-urban-landscape-with-traffic.jpg');
     background-size: cover; /* Ajusta a imagem para cobrir toda a área da div */
     background-position: center; 
     background-repeat: no-repeat; 
-    color: #FFFFFF; 
+    color: var(--color-light); 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra do texto para melhor legibilidade */
     padding: 300px 1.31%;
     background-color: rgba(0, 40, 85, 0.8);
@@ -151,69 +161,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #FFFFFF; 
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-light); 
+    font-family: var(--font-tertiary);
     padding: 10px 15px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
 }
-
-
-@media (max-width: 1140px) {
-
-    body {
-        max-width: 100%;
-        width: auto;
-        overflow-x: hidden; 
-    }
-
-    .cabecalho__menu {
-        width: 100%; 
-    }
-
-    .cabecalho__menu__container {
-        position: relative; 
-        flex-direction: column; 
-        gap: 15px; 
-        padding: 8px 5%; 
-        width: 100%; 
-        margin: 0; 
-    }
-
-    .cabecalho__menu__container img {
-        width: 37px;
-    }
-
-    .logo__container{
-        font-size: 1.2rem; 
-        gap: 5px; 
-    }
-
-    .menu-principal {
-        gap: 5px; 
-        font-size: 1.2rem; 
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0; 
-    }
-
-    .menu-principal li {
-        padding: 5px 5px; 
-        font-size: 1rem; 
-    }
-
-    .intro-section {
-        width: 100%; 
-        font-size: 1.2rem; 
-        padding: 100px 5%; 
-        text-align: center;
-        overflow-x: hidden; 
-    }
-
-    main {
-        padding: 10px 5%; 
-        width: 100%; 
-        box-sizing: border-box; 
-    }
-}
-
-
