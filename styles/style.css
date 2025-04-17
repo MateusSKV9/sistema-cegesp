@@ -96,9 +96,12 @@ header {
 }
 
 .nav-header li {
+	font-size: 0.98em;
 	cursor: pointer;
 	padding: 5px;
 	position: relative;
+	display: flex;
+	justify-content: center;
 }
 
 .nav-header li:hover {
@@ -160,12 +163,12 @@ header {
 #news a {
 	display: flex;
 	align-items: center;
-  gap: 5px;
+	gap: 5px;
 }
 
 #about i,
 #news i {
-  color: #566480;
+	color: #566480;
 	transition: all 0.1s ease;
 	font-size: 0.8em;
 }
@@ -173,7 +176,7 @@ header {
 #about:hover i,
 #news:hover i {
 	transform: translateY(2px);
-  color: var(--high-blue);
+	color: var(--high-blue);
 }
 
 /* #about-menu::before,
@@ -224,13 +227,12 @@ header {
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 30px;
 }
 
 /* ------------- HOME ------------- */
 
 #home {
-	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -241,6 +243,8 @@ main {
 	gap: 10px;
 	color: white;
 	background-attachment: fixed;
+	padding: 200px 0px;
+	margin-top: 65px;
 }
 
 #home h1 {
