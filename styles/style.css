@@ -212,9 +212,18 @@ header {
 /* ------------- MAIN ------------- */
 
 main {
+	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+}
+
+.main-title {
+	text-align: center;
+	font-family: var(--font-montserrat);
+	margin: 45px 20px;
+	color: var(--red);
+	font-weight: 600;
 }
 
 /* ------------- HOME ------------- */
@@ -231,7 +240,7 @@ main {
 	color: white;
 	background-attachment: fixed;
 	padding: 200px 0px;
-	margin-top: 65px;
+	margin-top: 5px;
 }
 
 #home h1 {
@@ -256,6 +265,5 @@ main {
 }
 
 .lorem h2 {
-	margin-bottom: 10px;
 	color: var(--red);
 }
