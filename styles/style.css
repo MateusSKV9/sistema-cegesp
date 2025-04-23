@@ -179,19 +179,6 @@ header {
 	color: var(--high-blue);
 }
 
-/* #about-menu::before,
-#news-menu::before {
-	content: "";
-	position: absolute;
-	width: 0px;
-	height: 0px;
-	top: -13px;
-	left: 5px;
-	border: 7px solid var(--high-blue);
-	border-color: transparent transparent var(--dark-blue);
-	z-index: -999;
-} */
-
 #about-menu li:hover,
 #news-menu li:hover {
 	color: var(--high-blue);
