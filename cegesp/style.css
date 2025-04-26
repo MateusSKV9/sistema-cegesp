@@ -122,7 +122,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  mix-blend-mode: overlay;
+  /*mix-blend-mode: overlay;*/
 }
 .banner-container h1 {
   font-family: DM Serif Display, serif;
