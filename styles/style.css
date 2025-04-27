@@ -112,6 +112,14 @@ header {
 	justify-content: center;
 }
 
+.nav-header li ul li {
+	padding: 0px;
+}
+
+.nav-header li ul li {
+	padding: 3px;
+}
+
 .nav-header li:hover {
 	text-shadow: 0px 1px 1px var(--white-default);
 }
@@ -220,23 +228,37 @@ header {
 /* ------------- MAIN ------------- */
 
 main {
+	padding: 0px 15px 80px;
 	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 30px;
 }
 
 .main-title {
 	text-align: center;
-	font-family: var(--font-montserrat);
-	margin: 45px 20px;
-	color: var(--red);
+	font-family: var(--font-roboto);
+	margin: 45px 20px 0px;
+	color: var(--high-blue);
 	font-weight: 600;
+	width: max-content;
+	padding-bottom: 2px;
+	border-bottom: 4px solid var(--high-blue);
+}
+
+hr {
+	margin-top: -34px;
+	margin-bottom: 15px;
+	width: 50%;
+	border: 1px solid var(--high-blue);
 }
 
 /* ------------- HOME ------------- */
 
 #home {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -258,7 +280,7 @@ main {
 
 	padding-bottom: 10px;
 	border-bottom: 1px solid white;
-	font-family: var(--font-montserrat);
+	font-family: var(--font-roboto);
 }
 
 #home h3 {
@@ -274,4 +296,23 @@ main {
 
 .lorem h2 {
 	color: var(--red);
+}
+
+/* ------------- TEAM & OBJECTIVE ------------- */
+
+.container-cards {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 280px));
+	justify-content: center;
+	gap: 60px 40px;
+}
+
+.card {
+	position: relative;
+	background-color: whitesmoke;
+	border: 2px solid white;
+	height: 420px;
+	box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
 }
