@@ -1,0 +1,45 @@
+@media (max-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+
+  body {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #cfcfcf;
+    padding: 0 15px; /* Adiciona espaço nas laterais em telas menores */
+    box-sizing: border-box; /* Faz o padding não aumentar o tamanho total */
+  }
+
+  main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: #909090 0px 0px 10px;
+    box-sizing: border-box;
+  }
+
+  rticle h2 {
+    font-size: 24px; /* Diminuir tamanho do título */
+  }
+
+  article .data {
+    font-size: 12px; /* Deixar a data mais leve */
+  }
+
+  article .categoria {
+    width: auto;
+    padding: 5px 10px;
+  }
+
+  article .main-noticia {
+    padding: 10px;
+  }
+}

@@ -8,10 +8,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
@@ -21,6 +22,10 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*-------------------- */
@@ -32,20 +37,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.title {
+.header .title {
   font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
   font-size: 30px;
   color: #333;
   margin-bottom: 10px;
@@ -78,10 +74,14 @@ header {
 .search-button {
   width: 50px;
   height: 100%;
-  background-color: #888;
+  background-color: #314ae7;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.fa-search {
+  color: white;
 }
 
 .search-button:hover {
@@ -90,14 +90,14 @@ header {
 
 main {
   width: 100%;
-  max-width: 900px;
+  max-width: 900px; /*1300 pra 4 fr*/
 }
 /*----------------CARDS*/
 .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  background-color: red;
+  background-color: ;
 }
 .card {
   background-color: #fff;
@@ -111,28 +111,38 @@ main {
   transform: scale(1.02);
 }
 
-.card-image {
+.card-image img {
   width: 100%;
   height: 150px;
   background-color: #888;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .card-content {
-  padding: 20px;
+  padding: 10px;
 }
 .card-head {
   display: flex;
   justify-content: space-between;
-  background-color: chartreuse;
   align-items: center;
+  background-color: ;
 }
 .card .categoria {
   padding: 5px;
   border-radius: 20px;
-  background-color: yellow;
+  text-transform: uppercase;
 }
+.artg {
+  background: linear-gradient(120deg, #a1baff, #648dff);
+  color: #0e3190;
+}
+.pesq {
+  background: linear-gradient(120deg, #ffaaaa, #ff7474);
+  color: #960e0e;
+}
+
 .data {
   font-size: 0.8rem;
   color: #aaa;
