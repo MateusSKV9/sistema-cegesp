@@ -4,6 +4,10 @@
 	header {
 		justify-content: center;
 	}
+
+  main {
+    margin-top: 80px;
+  }
 }
 
 @media screen and (min-width: 857px) {
