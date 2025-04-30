@@ -78,5 +78,7 @@ article .categoria {
 
 article .main-noticia {
   padding: 30px 0px; /*verti e horiz*/
+  justify-content: center;
+  align-items: center;
   background-color: ;
 }
