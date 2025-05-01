@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1026px) {
+	header {
+		justify-content: center;
+	}
+
+  main {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 857px) {
+	#mobile-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 857px) {
+	body {
+		font-family: var(--font-roboto-condensed);
+	}
+
+	header {
+		flex-direction: column;
+	}
+
+	header nav {
+		display: flex;
+		border-radius: 5px;
+		box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.3);
+	}
+
+	.container-logo {
+		align-self: flex-start;
+	}
+
+	.nav-group {
+		display: none;
+		flex-direction: column;
+	}
+
+	.nav-header {
+		flex-direction: column;
+		gap: 0px;
+	}
+
+	.nav-header li {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.nav-header li:not(:last-of-type) {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	#menu-toggle:checked ~ .nav-group {
+		display: flex;
+	}
+
+	#about-menu,
+	#news-menu {
+		width: 90%;
+		gap: 0px;
+		padding: 10px 20px;
+	}
+
+	.menu-icon {
+		position: absolute;
+		top: 17px;
+		right: 16px;
+		width: 30px;
+		height: 26px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		z-index: 2;
+	}
+
+	.menu-icon span {
+		display: block;
+		height: 4px;
+		background: #333;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+	}
+
+	.menu-icon:hover span:nth-child(1),
+	.menu-icon:hover span:nth-child(2),
+	.menu-icon:hover span:nth-child(3) {
+		background-color: var(--red);
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(1) {
+		width: 33px;
+		transform: rotate(47deg) translateY(12px) translateX(5px);
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(2) {
+		opacity: 0;
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(3) {
+		width: 33px;
+		transform: rotate(-49deg) translateY(-11px) translateX(5px);
+	}
+
+	#about-menu::before,
+	#news-menu::before {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#home {
+		font-size: 0.85em;
+	}
+}

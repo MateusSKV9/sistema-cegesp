@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --white-default: #fbfbfb;
+    --dark-blue: #0b1e49;
+    --red: #e3242b;
+    --midlle-blue: #1e3c72;
+    --high-blue: #2d6fff;
+
+    --font-montserrat: 'Montserrat';
+    --font-poppins: 'Poppins';
+}
+
+main {
+    padding: 20px 50px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: var(--dark-blue);
+}
+
+.section-forms {
+    padding: 30px 50px;
+    background-color: darkgray;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+form .input {
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+form input::placeholder {
+    color: black;
+}
+
+#inome {
+    width: 100%;
+}
+
+#iautor {
+    width: 48%;
+}
+
+#icategoria {
+    width: 48%;
+}
+
+.section-result {
+    max-width: 90%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.result-item {
+    min-height: 350px;
+    padding: 20px;
+    background-color: darkgray;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.result-item img {
+    min-width: 300px;
+    background-color: #0b1e49;
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h3 {
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+.nome-autor {
+    font-size: 0.9em;
+}
+
+.section-text p {
+    text-align: justify;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.information a {
+    padding: 8px 16px;
+    color: var(--white-default);
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 4px;
+}
