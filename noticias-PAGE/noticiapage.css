@@ -105,6 +105,10 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .card:hover {
@@ -163,9 +167,11 @@ p {
 
 .leia-mais {
   display: block;
-  width: 100px;
-  margin-top: 20px;
   padding: 10px;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: 10px;
+  margin-bottom: 10px;
   background-color: #ccc;
   border: none;
   border-radius: 30px;
