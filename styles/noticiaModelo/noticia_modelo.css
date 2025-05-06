@@ -1,0 +1,43 @@
+main {
+  padding: 0 !important;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+
+}
+
+article h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+article .data {
+  color: #4c4c4c;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+article .categoria {
+  padding: 7px;
+  border-radius: 50px;
+  width: 70px;
+  background-color: #2d56fb;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
