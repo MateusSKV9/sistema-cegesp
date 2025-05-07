@@ -135,7 +135,7 @@ main {
 }
 .card .categoria {
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   text-transform: uppercase;
 }
 .artg {
@@ -172,7 +172,7 @@ p {
   margin-top: auto;
   margin-left: 10px;
   margin-bottom: 10px;
-  background-color: #ccc;
+  background-color: #ccc; /*#dfdbff;*/
   border: none;
   border-radius: 30px;
   color: #333;
