@@ -20,21 +20,21 @@
 	flex-direction: column;
 }
 
-.card:nth-of-type(1) span {
+.container-cards a:nth-of-type(1) span {
 	background-color: var(--highlight-blue);
 }
-.card:nth-of-type(2) span,
-.card:nth-of-type(4) span {
+.container-cards a:nth-of-type(2) span,
+.container-cards a:nth-of-type(4) span {
 	background-color: var(--highlight-red);
 }
-.card:nth-of-type(3) span {
+.container-cards a:nth-of-type(3) span {
 	background-color: var(--highlight-green);
 }
 
-.card:nth-of-type(5) span {
+.container-cards a:nth-of-type(5) span {
 	background-color: var(--highlight-yellow);
 }
-.card:nth-of-type(6) span {
+.container-cards a:nth-of-type(6) span {
 	background-color: var(--highlight-black);
 }
 
@@ -63,12 +63,12 @@
 	font-size: 0.95em;
 }
 
-.card-description p a {
+.strong-name {
 	color: var(--red);
 	position: relative;
 }
 
-.card-description p a:hover {
+.strong-name:hover {
 	text-decoration: underline;
 }
 

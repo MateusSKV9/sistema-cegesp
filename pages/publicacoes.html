@@ -6,11 +6,13 @@
         <title>Publicações Científicas - CEGESP</title>
 
         <link rel="shortcut icon" href="assets/images/logo-cegesp-oficial-removebg-preview.png" type="image/x-icon" />
-        <link rel="stylesheet" href="/styles/style.css" />
-        <link rel="stylesheet" href="/styles/medias-queries.css" />
-
-        <link rel="stylesheet" href="/styles/pages/publicacoes.css" />
-        <link rel="stylesheet" href="/styles/media-queries/media-queries-publicacoes.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/header/header.css">
+        <link rel="stylesheet" href="/styles/media-queries/medias-queries.css" />
+        <link rel="stylesheet" href="/styles/publicacoes/publicacoes.css" />
+		<link rel="stylesheet" href="/styles/footer/footer.css">
+        <link rel="stylesheet" href="/styles/publicacoes/publicacoes_phone.css">
+        <link rel="stylesheet" href="/styles/publicacoes/publicacoes_tablet.css">
     </head>
     <body>
         <header>
@@ -37,8 +39,8 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                             <ul id="about-menu">
-                                <li><a href="./sobre/objetivo.html">OBJETIVO</a></li>
-                                <li><a href="./sobre/equipe.html">EQUIPE</a></li>
+                                <li><a href="./objetivo.html">OBJETIVO</a></li>
+                                <li><a href="./equipe.html">EQUIPE</a></li>
                             </ul>
                         </li>
                         <li id="news">
@@ -53,7 +55,7 @@
                         <li><a href="./infodados.html">INFO DADOS</a></li>
                         <li><a href="./publicacoes.html">PUBLICAÇÕES CIENTÍFICAS</a></li>
                         <li><a href="./contato.html">CONTATO</a></li>
-                        <!-- <li><a href="">Redes Sociais</a></li> -->
+                  
                     </ul>
                 </nav>
 
@@ -66,11 +68,11 @@
             <section class="section-forms">
                 <form action="">
                     <input class="input" id="inome" type="text" placeholder="Nome do Trabalho" />
-                    <select class="input" name="" id="iautor">
+                    <select class="input" name="" id="iautor" title="Autor">
                         <option value="" disabled selected>Autor</option>
                         <option value=""></option>
                     </select>
-                    <select class="input" name="" id="icategoria">
+                    <select class="input" name="" id="icategoria" title="Categoria">
                         <option value="" disabled selected>Categoria</option>
                         <option value=""></option>
                     </select>
@@ -80,7 +82,6 @@
             <h2>RESULTADO</h2>
             <section class="section-result">
                 <div class="result-item">
-                    <img src="" alt="Preview do Artigo" />
                     <div class="section-text">
                         <div class="title">
                             <h3>Title Artigo</h3>
@@ -102,7 +103,6 @@
                 </div>
                 
                 <div class="result-item">
-                    <img src="" alt="Preview do Artigo" />
                     <div class="section-text">
                         <div class="title">
                             <h3>Title Artigo</h3>
@@ -124,7 +124,6 @@
                 </div>
 
                 <div class="result-item">
-                    <img src="" alt="Preview do Artigo" />
                     <div class="section-text">
                         <div class="title">
                             <h3>Title Artigo</h3>
