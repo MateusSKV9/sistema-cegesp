@@ -8,12 +8,12 @@ class Header extends HTMLElement {
 		try {
 			const [globalCss, headerCss, headerPhoneCss, headerTabletCss, mediaQueries, headerHtml] = await Promise.all(
 				[
-					fetch("./styles/global.css").then((res) => res.text()),
-					fetch("./components/header/styles/header.css").then((res) => res.text()),
-					fetch("./components/header/styles/header_phone.css").then((res) => res.text()),
-					fetch("./components/header/styles/header_tablet.css").then((res) => res.text()),
-					fetch("./styles/media-queries/medias-queries.css").then((res) => res.text()),
-					fetch("./components/header/header.html").then((res) => res.text()),
+					fetch("/styles/global.css").then((res) => res.text()),
+					fetch("/components/header/styles/header.css").then((res) => res.text()),
+					fetch("/components/header/styles/header_phone.css").then((res) => res.text()),
+					fetch("/components/header/styles/header_tablet.css").then((res) => res.text()),
+					fetch("/styles/media-queries/medias-queries.css").then((res) => res.text()),
+					fetch("/components/header/header.html").then((res) => res.text()),
 				]
 			);
 

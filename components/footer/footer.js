@@ -9,11 +9,11 @@ class Footer extends HTMLElement {
 			// Buscar todos os arquivos CSS e o HTML
 			const [globalCss, footerCss, footerPhoneCss, footerTabletCss, footerHtml] = await Promise.all(
 				[
-					fetch("./styles/global.css").then((res) => res.text()),
-					fetch("./components/footer/styles/footer.css").then((res) => res.text()),
-					fetch("./components/footer/styles/footer_phone.css").then((res) => res.text()),
-					fetch("./components/footer/styles/footer_tablet.css").then((res) => res.text()),
-					fetch("./components/footer/footer.html").then((res) => res.text()),
+					fetch("/styles/global.css").then((res) => res.text()),
+					fetch("/components/footer/styles/footer.css").then((res) => res.text()),
+					fetch("/components/footer/styles/footer_phone.css").then((res) => res.text()),
+					fetch("/components/footer/styles/footer_tablet.css").then((res) => res.text()),
+					fetch("/components/footer/footer.html").then((res) => res.text()),
 				]
 			);
 
