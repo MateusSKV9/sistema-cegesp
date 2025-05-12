@@ -1,3 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 main {
     padding: 20px 50px;
+}
+
+.section-state,
+.section-grouping,
+.section-municipality,
+.section-territory,
+.section-agenda,
+.section-document,
+.section-period {
+	display: none;
 }
