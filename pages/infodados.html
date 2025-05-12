@@ -5,7 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Publicações Científicas - CEGESP</title>
 
-		<link rel="shortcut icon" href="assets/images/logo-cegesp-oficial-removebg-preview.png" type="image/x-icon" />
+		<link
+			rel="shortcut icon"
+			href="assets/images/logo-cegesp-oficial-removebg-preview.png"
+			type="image/x-icon"
+		/>
 		<link rel="stylesheet" href="/styles/global.css" />
 		<link rel="stylesheet" href="/styles/media-queries/medias-queries.css" />
 		<link rel="stylesheet" href="/styles/infodados/infodados.css" />
@@ -18,53 +22,52 @@
 
 			<div class="esfera">
 				<label for="esfera">Esfera:</label>
-			<select name="esfera" id="esfera">
-				<option value="federal">Federal</option>
-				<option value="estadual">Estadual</option>
-				<option value="municipal">Municipal</option>
-			</select>
+				<select name="esfera" id="esfera">
+					<option value="federal">Federal</option>
+					<option value="estadual">Estadual</option>
+					<option value="municipal">Municipal</option>
+				</select>
 			</div>
 
 			<div class="agenda">
 				<h3>Agenda</h3>
 				<div class="executivo">
-					<input type="radio" name="executivo" id="executivo">
+					<input type="radio" name="executivo" id="executivo" />
 					<label for="executivo">Poder Executivo</label>
 				</div>
 				<div class="legislativo">
-					<input type="radio" name="legislativo" id="legislativo">
+					<input type="radio" name="legislativo" id="legislativo" />
 					<label for="legislativo">Poder Legislativo</label>
 				</div>
 				<div class="judiciario">
-					<input type="radio" name="judiciario" id="judiciario">
+					<input type="radio" name="judiciario" id="judiciario" />
 					<label for="judiciario">Poder Judiciario</label>
 				</div>
 			</div>
 
 			<div class="documento">
 				<label for="documento">Tipo de documento:</label>
-			<select name="documento">
-				  <option value="loa">LOA</option>
-				  <option value="ldo">LDO</option>
-				  <option value="ppa">PPA</option>
-				  <option value="termo_posse">Termo Posse (Agenda retórica)</option>
-				  <option value="decretos">Decretos</option>
-				  <option value="plano_governo">Plano de governo</option>
-				  <option value="msg_anual">MSG Anual</option>
-			  </select>
+				<select name="documento" aria-label="Tipo de documento">
+					<option value="loa">LOA</option>
+					<option value="ldo">LDO</option>
+					<option value="ppa">PPA</option>
+					<option value="termo_posse">Termo Posse (Agenda retórica)</option>
+					<option value="decretos">Decretos</option>
+					<option value="plano_governo">Plano de governo</option>
+					<option value="msg_anual">MSG Anual</option>
+				</select>
 			</div>
 
 			<div class="periodo">
 				<h3>Período</h3>
 				<label for="start-date">Início:</label>
-				<input type="date" id="start-date" name="start-date">
+				<input type="date" id="start-date" name="start-date" />
 
 				<label for="end-date">Fim:</label>
-				<input type="date" id="end-date" name="end-date">
+				<input type="date" id="end-date" name="end-date" />
 			</div>
 
 			<button>Buscar</button>
-
 		</main>
 
 		<main>
@@ -72,11 +75,11 @@
 
 			<div class="esfera">
 				<label for="esfera">Esfera:</label>
-			<select name="esfera" id="esfera">
-				<option value="federal">Federal</option>
-				<option value="estadual">Estadual</option>
-				<option value="municipal">Municipal</option>
-			</select>
+				<select name="esfera" id="esfera">
+					<option value="federal">Federal</option>
+					<option value="estadual">Estadual</option>
+					<option value="municipal">Municipal</option>
+				</select>
 			</div>
 
 			<div class="uf">
@@ -91,39 +94,38 @@
 			<div class="agenda">
 				<h3>Agenda</h3>
 				<div class="executivo">
-					<input type="radio" name="executivo" id="executivo">
+					<input type="radio" name="executivo" id="executivo" />
 					<label for="executivo">Poder Executivo</label>
 				</div>
 				<div class="legislativo">
-					<input type="radio" name="legislativo" id="legislativo">
+					<input type="radio" name="legislativo" id="legislativo" />
 					<label for="legislativo">Poder Legislativo</label>
 				</div>
 			</div>
 
 			<div class="documento">
 				<label for="documento">Tipo de documento:</label>
-			<select name="documento">
-				  <option value="loa">LOA</option>
-				  <option value="ldo">LDO</option>
-				  <option value="ppa">PPA</option>
-				  <option value="termo_posse">Termo Posse (Agenda retórica)</option>
-				  <option value="decretos">Decretos</option>
-				  <option value="plano_governo">Plano de governo</option>
-				  <option value="msg_anual">MSG Anual</option>
-			  </select>
+				<select name="documento" aria-label="Tipo de documento">
+					<option value="loa">LOA</option>
+					<option value="ldo">LDO</option>
+					<option value="ppa">PPA</option>
+					<option value="termo_posse">Termo Posse (Agenda retórica)</option>
+					<option value="decretos">Decretos</option>
+					<option value="plano_governo">Plano de governo</option>
+					<option value="msg_anual">MSG Anual</option>
+				</select>
 			</div>
 
 			<div class="periodo">
 				<h3>Período</h3>
 				<label for="start-date">Início:</label>
-				<input type="date" id="start-date" name="start-date">
+				<input type="date" id="start-date" name="start-date" />
 
 				<label for="end-date">Fim:</label>
-				<input type="date" id="end-date" name="end-date">
+				<input type="date" id="end-date" name="end-date" />
 			</div>
 
 			<button>Buscar</button>
-
 		</main>
 
 		<main>
@@ -131,11 +133,11 @@
 
 			<div class="esfera">
 				<label for="esfera">Esfera:</label>
-			<select name="esfera" id="esfera">
-				<option value="federal">Federal</option>
-				<option value="estadual">Estadual</option>
-				<option value="municipal">Municipal</option>
-			</select>
+				<select name="esfera" id="esfera">
+					<option value="federal">Federal</option>
+					<option value="estadual">Estadual</option>
+					<option value="municipal">Municipal</option>
+				</select>
 			</div>
 
 			<div class="uf">
@@ -150,11 +152,10 @@
 			<div class="agrupamento">
 				<h3>Agrupamento:</h3>
 				<label for="pesquisaMunicipio">Pesquisa por município</label>
-				<input type="radio" name="pesquisaMunicipio" id="pesquisaMunicipio">
+				<input type="radio" name="pesquisaMunicipio" id="pesquisaMunicipio" />
 
 				<label for="pesquisaTerritorio">Pesquisa por território</label>
-				<input type="radio" name="pesquisaTerritorio" id="pesquisaTerritorio">
-
+				<input type="radio" name="pesquisaTerritorio" id="pesquisaTerritorio" />
 			</div>
 
 			<div class="municipio">
@@ -175,43 +176,41 @@
 				</select>
 			</div>
 
-
 			<div class="agenda">
 				<h3>Agenda</h3>
 				<div class="executivo">
-					<input type="radio" name="executivo" id="executivo">
+					<input type="radio" name="executivo" id="executivo" />
 					<label for="executivo">Poder Executivo</label>
 				</div>
 				<div class="legislativo">
-					<input type="radio" name="legislativo" id="legislativo">
+					<input type="radio" name="legislativo" id="legislativo" />
 					<label for="legislativo">Poder Legislativo</label>
 				</div>
 			</div>
 
 			<div class="documento">
 				<label for="documento">Tipo de documento:</label>
-			<select name="documento">
-				  <option value="loa">LOA</option>
-				  <option value="ldo">LDO</option>
-				  <option value="ppa">PPA</option>
-				  <option value="termo_posse">Termo Posse (Agenda retórica)</option>
-				  <option value="decretos">Decretos</option>
-				  <option value="plano_governo">Plano de governo</option>
-				  <option value="msg_anual">MSG Anual</option>
-			  </select>
+				<select name="documento" aria-label="Tipo de documento">
+					<option value="loa">LOA</option>
+					<option value="ldo">LDO</option>
+					<option value="ppa">PPA</option>
+					<option value="termo_posse">Termo Posse (Agenda retórica)</option>
+					<option value="decretos">Decretos</option>
+					<option value="plano_governo">Plano de governo</option>
+					<option value="msg_anual">MSG Anual</option>
+				</select>
 			</div>
 
 			<div class="periodo">
 				<h3>Período</h3>
 				<label for="start-date">Início:</label>
-				<input type="date" id="start-date" name="start-date">
+				<input type="date" id="start-date" name="start-date" />
 
 				<label for="end-date">Fim:</label>
-				<input type="date" id="end-date" name="end-date">
+				<input type="date" id="end-date" name="end-date" />
 			</div>
 
 			<button>Buscar</button>
-
 		</main>
 
 		<my-footer></my-footer>
