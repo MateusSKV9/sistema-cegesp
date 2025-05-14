@@ -63,10 +63,105 @@
 		<main>
 			<h2>Acesso aos documentos oficiais </h2>
 
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro unde suscipit aut inventore voluptates voluptas, provident eveniet tempora sunt possimus harum eum quas nesciunt eos quibusdam ratione molestias illo quasi?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi illum soluta exercitationem ab laboriosam voluptate nam necessitatibus quo. Debitis assumenda expedita ad nesciunt sed. Et amet in natus ut dolorum.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus officia praesentium cupiditate totam quas. Reprehenderit explicabo distinctio perferendis doloremque dolorum, id rem neque repudiandae deleniti facilis maiores sunt possimus itaque.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta nemo ipsa officia non consectetur provident sequi ut vel, quia voluptate quis atque libero voluptates nihil dolorem. Doloremque, eius amet! Ex.
+            <form id="infodadosForm" action="" method="post">
+				<div class="form-group">
+					<label for="esfera">Esfera:</label>
+					<select name="esfera" id="esfera">
+						<option value="federal">Federal</option>
+						<option value="estadual">Estadual</option>
+						<option value="municipal">Municipal</option>
+					</select>
+				</div>
+
+				<!-- Jhon: Campos para Estadual e Municipal -->
+				<div id="ufGroup" class="form-group hidden">
+					<label for="uf">UF:</label>
+					<select name="uf" id="uf">
+
+					</select>
+				</div>
+
+				<!-- Jhon: Campos específicos para Municipal -->
+				<div id="agrupamentoGroup" class="form-group hidden">
+					<h3>Agrupamento:</h3>
+					<div>
+						<input type="radio" name="agrupamento" id="pesquisaMunicipio" value="municipio">
+						<label for="pesquisaMunicipio">Pesquisa por município</label>
+					</div>
+					<div>
+						<input type="radio" name="agrupamento" id="pesquisaTerritorio" value="territorio">
+						<label for="pesquisaTerritorio">Pesquisa por território</label>
+					</div>
+				</div>
+	
+				<div id="municipioGroup" class="form-group hidden">
+					<label for="municipio">Município:</label>
+					<select name="municipio" id="municipio">
+						<option value="jequie">Jequié</option>
+						<option value="conquista">Vitória da Conquista</option>
+						<option value="itagi">Itagi</option>
+					</select>
+				</div>
+	
+				<div id="territorioGroup" class="form-group hidden">
+					<label for="territorio">Território:</label>
+					<select name="territorio" id="territorio">
+						<option value="ba">BA</option>
+						<option value="df">DF</option>
+						<option value="mg">MG</option>
+					</select>
+				</div>
+
+				<!-- Jhon: Agenda -->
+				<div class="form-group" id="agendaGroup">
+					<h3>Agenda</h3>
+					<div id="poderOptions">
+						<div>
+							<input type="radio" name="poder" id="executivo" value="executivo">
+							<label for="executivo">Poder Executivo</label>
+						</div>
+						<div>
+							<input type="radio" name="poder" id="legislativo" value="legislativo">
+							<label for="legislativo">Poder Legislativo</label>
+						</div>
+						<div id="judiciarioOption">
+							<input type="radio" name="poder" id="judiciario" value="judiciario">
+							<label for="judiciario">Poder Judiciário</label>
+						</div>
+					</div>
+				</div>
+
+				<!-- Jhon: Documento -->
+				<div class="form-group">
+					<label for="documento">Tipo de documento:</label>
+					<select name="documento" id="documento">
+						<option value="loa">LOA</option>
+						<option value="ldo">LDO</option>
+						<option value="ppa">PPA</option>
+						<option value="termo_posse">Termo Posse (Agenda retórica)</option>
+						<option value="decretos">Decretos</option>
+						<option value="plano_governo">Plano de governo</option>
+						<option value="msg_anual">MSG Anual</option>
+					</select>
+				</div>
+
+				<!-- Jhon: Período -->
+				<div class="form-group">
+					<h3>Período</h3>
+					<div>
+						<label for="start-date">Início:</label>
+						<input type="date" id="start-date" name="start-date">
+					</div>
+					<div>
+						<label for="end-date">Fim:</label>
+						<input type="date" id="end-date" name="end-date">
+					</div>
+				</div>
+	
+				<button type="submit">Buscar</button>
+
+			</form>
+
 		</main>
 
 		<footer>
