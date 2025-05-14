@@ -1,0 +1,171 @@
+header {
+	background-color: #fbfbfb;
+	padding: 10px 20px;
+	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	position: fixed;
+	width: 100%;
+	max-width: 1140px;
+	font-family: var(--font-roboto);
+	z-index: 99;
+}
+
+#logo {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+#logo span {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: var(--midlle-blue);
+}
+
+#logo img {
+	width: 45px;
+}
+
+.nav-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 20px;
+	color: var(--dark-blue);
+	font-weight: 500;
+}
+
+.nav-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+.nav-header li {
+	font-size: 0.98em;
+	cursor: pointer;
+	padding: 5px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-header li ul li {
+	padding: 0px;
+}
+
+.nav-header li ul li {
+	padding: 3px;
+}
+
+.nav-header li:hover {
+	text-shadow: 0px 1px 1px var(--white-default);
+}
+
+.nav-header li a {
+	transition: all 0.15s ease;
+}
+
+.nav-header > li:hover > a {
+	color: var(--high-blue);
+}
+
+#menu-toggle {
+	display: none;
+}
+
+#about,
+#news {
+	position: relative;
+}
+
+#about:hover #about-menu {
+	display: flex;
+}
+
+#news:hover #news-menu {
+	display: flex;
+}
+
+#about-menu,
+#news-menu {
+	display: flex;
+}
+
+#about-menu,
+#news-menu {
+	width: max-content;
+	position: absolute;
+	background-color: var(--white-default);
+	list-style: none;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+	display: none;
+	flex-direction: column;
+	gap: 6px;
+	border-radius: 5px;
+	padding: 12px 20px;
+	top: 100%;
+	z-index: 2;
+}
+
+#about-menu li,
+#news-menu li {
+	text-align: center;
+}
+
+#about a,
+#news a {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+#about i,
+#news i {
+	color: #566480;
+	transition: all 0.1s ease;
+	font-size: 0.8em;
+}
+
+#about:hover i,
+#news:hover i {
+	transform: translateY(2px);
+	color: var(--high-blue);
+}
+
+#about-menu li:hover,
+#news-menu li:hover {
+	color: var(--high-blue);
+}
+
+#about-menu li:not(:last-child) {
+	padding-bottom: 6px;
+	border-bottom: 1px solid black;
+}
+
+.login {
+	background-color: var(--high-blue);
+	background-image: linear-gradient(to bottom, var(--high-blue) 50%, #2665ed 50%);
+	border-radius: 5px;
+	color: white;
+	padding: 6px 15px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+	transition: all 0.15s ease;
+	font-weight: 500;
+}
+
+.login:hover {
+	transform: translateY(1px);
+	background: #2665ed;
+}
+
+.login:active {
+	transform: scale(0.98);
+}
