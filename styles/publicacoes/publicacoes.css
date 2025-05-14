@@ -14,9 +14,10 @@ h2 {
 .section-forms {
 	width: 90%;
 	padding: 30px 50px;
-	background-color: #bebebe;
+	background-color: whitesmoke;
 	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.089);
 }
 
 form {
@@ -70,9 +71,9 @@ form input::placeholder {
 .result-item {
 	min-height: 350px;
 	padding: 40px;
-	background-color: #fff;
+	background-color: whitesmoke;
 	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 	border: 1px solid rgba(0, 0, 0, 0.089);
 
 	display: flex;
