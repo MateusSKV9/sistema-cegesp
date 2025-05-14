@@ -61,203 +61,106 @@
 		</header>
 
 		<main>
-			<h2>Acesso aos documentos oficiais - Federal</h2>
+			<h2>Acesso aos documentos oficiais </h2>
 
-			<div class="esfera">
-				<label for="esfera">Esfera:</label>
-			<select name="esfera" id="esfera">
-				<option value="federal">Federal</option>
-				<option value="estadual">Estadual</option>
-				<option value="municipal">Municipal</option>
-			</select>
-			</div>
-
-			<div class="agenda">
-				<h3>Agenda</h3>
-				<div class="executivo">
-					<input type="radio" name="executivo" id="executivo">
-					<label for="executivo">Poder Executivo</label>
+			<form id="infodadosForm" action="" method="post">
+				<div class="form-group">
+					<label for="esfera">Esfera:</label>
+					<select name="esfera" id="esfera">
+						<option value="federal">Federal</option>
+						<option value="estadual">Estadual</option>
+						<option value="municipal">Municipal</option>
+					</select>
 				</div>
-				<div class="legislativo">
-					<input type="radio" name="legislativo" id="legislativo">
-					<label for="legislativo">Poder Legislativo</label>
+
+				<!-- Jhon: Campos para Estadual e Municipal -->
+				<div id="ufGroup" class="form-group hidden">
+					<label for="uf">UF:</label>
+					<select name="uf" id="uf">
+
+					</select>
 				</div>
-				<div class="judiciario">
-					<input type="radio" name="judiciario" id="judiciario">
-					<label for="judiciario">Poder Judiciario</label>
+
+				<!-- Jhon: Campos específicos para Municipal -->
+				<div id="agrupamentoGroup" class="form-group hidden">
+					<h3>Agrupamento:</h3>
+					<div>
+						<input type="radio" name="agrupamento" id="pesquisaMunicipio" value="municipio">
+						<label for="pesquisaMunicipio">Pesquisa por município</label>
+					</div>
+					<div>
+						<input type="radio" name="agrupamento" id="pesquisaTerritorio" value="territorio">
+						<label for="pesquisaTerritorio">Pesquisa por território</label>
+					</div>
 				</div>
-			</div>
-
-			<div class="documento">
-				<label for="documento">Tipo de documento:</label>
-			<select name="documento">
-				  <option value="loa">LOA</option>
-				  <option value="ldo">LDO</option>
-				  <option value="ppa">PPA</option>
-				  <option value="termo_posse">Termo Posse (Agenda retórica)</option>
-				  <option value="decretos">Decretos</option>
-				  <option value="plano_governo">Plano de governo</option>
-				  <option value="msg_anual">MSG Anual</option>
-			  </select>
-			</div>
-
-			<div class="periodo">
-				<h3>Período</h3>
-				<label for="start-date">Início:</label>
-				<input type="date" id="start-date" name="start-date">
-
-				<label for="end-date">Fim:</label>
-				<input type="date" id="end-date" name="end-date">
-			</div>
-
-			<button>Buscar</button>
-
-		</main>
-
-		<main>
-			<h2>Acesso aos documentos oficiais - Estadual</h2>
-
-			<div class="esfera">
-				<label for="esfera">Esfera:</label>
-			<select name="esfera" id="esfera">
-				<option value="federal">Federal</option>
-				<option value="estadual">Estadual</option>
-				<option value="municipal">Municipal</option>
-			</select>
-			</div>
-
-			<div class="uf">
-				<label for="uf">UF</label>
-				<select name="uf" id="uf">
-					<option value="ba">BA</option>
-					<option value="df">DF</option>
-					<option value="mg">MG</option>
-				</select>
-			</div>
-
-			<div class="agenda">
-				<h3>Agenda</h3>
-				<div class="executivo">
-					<input type="radio" name="executivo" id="executivo">
-					<label for="executivo">Poder Executivo</label>
+	
+				<div id="municipioGroup" class="form-group hidden">
+					<label for="municipio">Município:</label>
+					<select name="municipio" id="municipio">
+						<option value="jequie">Jequié</option>
+						<option value="conquista">Vitória da Conquista</option>
+						<option value="itagi">Itagi</option>
+					</select>
 				</div>
-				<div class="legislativo">
-					<input type="radio" name="legislativo" id="legislativo">
-					<label for="legislativo">Poder Legislativo</label>
+	
+				<div id="territorioGroup" class="form-group hidden">
+					<label for="territorio">Território:</label>
+					<select name="territorio" id="territorio">
+						<option value="ba">BA</option>
+						<option value="df">DF</option>
+						<option value="mg">MG</option>
+					</select>
 				</div>
-			</div>
 
-			<div class="documento">
-				<label for="documento">Tipo de documento:</label>
-			<select name="documento">
-				  <option value="loa">LOA</option>
-				  <option value="ldo">LDO</option>
-				  <option value="ppa">PPA</option>
-				  <option value="termo_posse">Termo Posse (Agenda retórica)</option>
-				  <option value="decretos">Decretos</option>
-				  <option value="plano_governo">Plano de governo</option>
-				  <option value="msg_anual">MSG Anual</option>
-			  </select>
-			</div>
-
-			<div class="periodo">
-				<h3>Período</h3>
-				<label for="start-date">Início:</label>
-				<input type="date" id="start-date" name="start-date">
-
-				<label for="end-date">Fim:</label>
-				<input type="date" id="end-date" name="end-date">
-			</div>
-
-			<button>Buscar</button>
-
-		</main>
-
-		<main>
-			<h2>Acesso aos documentos oficiais - Municipal</h2>
-
-			<div class="esfera">
-				<label for="esfera">Esfera:</label>
-			<select name="esfera" id="esfera">
-				<option value="federal">Federal</option>
-				<option value="estadual">Estadual</option>
-				<option value="municipal">Municipal</option>
-			</select>
-			</div>
-
-			<div class="uf">
-				<label for="uf">UF</label>
-				<select name="uf" id="uf">
-					<option value="ba">BA</option>
-					<option value="df">DF</option>
-					<option value="mg">MG</option>
-				</select>
-			</div>
-
-			<div class="agrupamento">
-				<h3>Agrupamento:</h3>
-				<label for="pesquisaMunicipio">Pesquisa por município</label>
-				<input type="radio" name="pesquisaMunicipio" id="pesquisaMunicipio">
-
-				<label for="pesquisaTerritorio">Pesquisa por território</label>
-				<input type="radio" name="pesquisaTerritorio" id="pesquisaTerritorio">
-
-			</div>
-
-			<div class="municipio">
-				<label for="municipio">Municipio</label>
-				<select name="municipio" id="municipio">
-					<option value="jequie">Jequie</option>
-					<option value="conquista">Vitoria da Conquista</option>
-					<option value="itagi">Itagi</option>
-				</select>
-			</div>
-
-			<div class="territorio">
-				<label for="territorio">Território</label>
-				<select name="territorio" id="territorio">
-					<option value="ba">BA</option>
-					<option value="df">DF</option>
-					<option value="mg">MG</option>
-				</select>
-			</div>
-
-
-			<div class="agenda">
-				<h3>Agenda</h3>
-				<div class="executivo">
-					<input type="radio" name="executivo" id="executivo">
-					<label for="executivo">Poder Executivo</label>
+				<!-- Jhon: Agenda -->
+				<div class="form-group" id="agendaGroup">
+					<h3>Agenda</h3>
+					<div id="poderOptions">
+						<div>
+							<input type="radio" name="poder" id="executivo" value="executivo">
+							<label for="executivo">Poder Executivo</label>
+						</div>
+						<div>
+							<input type="radio" name="poder" id="legislativo" value="legislativo">
+							<label for="legislativo">Poder Legislativo</label>
+						</div>
+						<div id="judiciarioOption">
+							<input type="radio" name="poder" id="judiciario" value="judiciario">
+							<label for="judiciario">Poder Judiciário</label>
+						</div>
+					</div>
 				</div>
-				<div class="legislativo">
-					<input type="radio" name="legislativo" id="legislativo">
-					<label for="legislativo">Poder Legislativo</label>
+
+				<!-- Jhon: Documento -->
+				<div class="form-group">
+					<label for="documento">Tipo de documento:</label>
+					<select name="documento" id="documento">
+						<option value="loa">LOA</option>
+						<option value="ldo">LDO</option>
+						<option value="ppa">PPA</option>
+						<option value="termo_posse">Termo Posse (Agenda retórica)</option>
+						<option value="decretos">Decretos</option>
+						<option value="plano_governo">Plano de governo</option>
+						<option value="msg_anual">MSG Anual</option>
+					</select>
 				</div>
-			</div>
 
-			<div class="documento">
-				<label for="documento">Tipo de documento:</label>
-			<select name="documento">
-				  <option value="loa">LOA</option>
-				  <option value="ldo">LDO</option>
-				  <option value="ppa">PPA</option>
-				  <option value="termo_posse">Termo Posse (Agenda retórica)</option>
-				  <option value="decretos">Decretos</option>
-				  <option value="plano_governo">Plano de governo</option>
-				  <option value="msg_anual">MSG Anual</option>
-			  </select>
-			</div>
+				<!-- Jhon: Período -->
+				<div class="form-group">
+					<h3>Período</h3>
+					<div>
+						<label for="start-date">Início:</label>
+						<input type="date" id="start-date" name="start-date">
+					</div>
+					<div>
+						<label for="end-date">Fim:</label>
+						<input type="date" id="end-date" name="end-date">
+					</div>
+				</div>
+	
+				<button type="submit">Buscar</button>
 
-			<div class="periodo">
-				<h3>Período</h3>
-				<label for="start-date">Início:</label>
-				<input type="date" id="start-date" name="start-date">
-
-				<label for="end-date">Fim:</label>
-				<input type="date" id="end-date" name="end-date">
-			</div>
-
-			<button>Buscar</button>
+			</form>
 
 		</main>
 
@@ -291,5 +194,6 @@
 		</footer>
 
 		<script src="https://kit.fontawesome.com/0a1412cd70.js" crossorigin="anonymous"></script>
+		<script src="/scripts/infodados.js"></script>
 	</body>
 </html>
