@@ -8,7 +8,7 @@ h2 {
 	font-family: var(--font-roboto);
 	font-size: 1.8em;
 	font-weight: 300;
-	color: var(--dark-blue);
+	color: var(--color-dark-blue);
 }
 
 .section-forms {
@@ -39,7 +39,7 @@ form .input {
 	color: black;
 	background-color: transparent;
 	border: none;
-	border-bottom: 2px solid var(--dark-blue);
+	border-bottom: 2px solid var(--color-dark-blue);
 }
 
 form input::placeholder {
@@ -124,8 +124,8 @@ form input::placeholder {
 
 .information a {
 	padding: 8px 16px;
-	color: var(--white-default);
-	background-color: var(--dark-blue);
+	color: var(--color-white-default);
+	background-color: var(--color-dark-blue);
 	border: none;
 	border-radius: 4px;
 }

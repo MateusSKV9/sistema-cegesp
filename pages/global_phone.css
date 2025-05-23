@@ -1,0 +1,41 @@
+@media (max-width: 600px) {
+
+	/* REGRAS ESTRUTURAIS ***************************************************/
+	main {
+		margin-top: 20vw;
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
+
+	/* REGRAS TEXTUAIS ***************************************************/
+
+	h1{
+		font-family: var(--font-roboto-condensed);
+		font-size: calc(var(--h1-text-size) * 0.25vw);
+	}
+	h2{
+		font-family: var(--font-roboto-condensed);
+		font-size: calc(var(--h2-text-size) * 0.2vw);
+	}
+	p{
+		font-family: var(--font-roboto-condensed);
+		font-size: calc(var(--p-text-size) * 0.2vw);
+		margin-bottom: 3vw;
+		line-height: 5vw;
+		
+	}
+	hr {
+		height: 0.1vw;
+		margin: 0;
+	}
+	/* REGRAS ESTILÍSTICAS ***************************************************/
+	.separator-s{
+		height: 5vw;
+	}
+	.separator-m{
+		height: 10vw;
+	}
+	.separator-b{
+		height: 20vw;
+	}
+}

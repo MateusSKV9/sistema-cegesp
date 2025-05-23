@@ -1,0 +1,29 @@
+@media (max-width: 600px) {
+
+    /* REGRAS ESTRUTURAIS ***************************************************/
+    footer {
+        margin-top: 15vw;
+        #section-contacts {
+            padding: 5vw 0;
+            gap: 5vw;
+            .contacts-item {
+                max-width: 95vw;
+                gap: 1vw;
+                img{
+                    width: 6vw;
+                }
+            }
+        }
+        #section-copyright {
+            padding: 10vw 5vw;
+            gap: 5vw;
+            #section-images {
+                max-height: 100vw;
+                gap: 4vw;
+                img {
+                    max-width: 30vw;
+                }
+            }
+        }
+    }
+}

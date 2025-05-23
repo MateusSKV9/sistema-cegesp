@@ -26,6 +26,8 @@ function addStyle(href) {
 function loadStyles(){
     // adiciona o CSS global
     addStyle('/pages/global.css');
+    addStyle('/pages/global_tablet.css');
+    addStyle('/pages/global_phone.css');
     // adiciona o favicon
     document.head.appendChild(Object.assign(document.createElement('link'), {
         rel: 'shortcut icon',
@@ -40,6 +42,7 @@ function loadStyles(){
         addStyle('/pages/index_tablet.css');
         addStyle('/pages/index_phone.css');
     }else if(paginaAtual == ''){
+
     }
       
 }

@@ -104,7 +104,7 @@ main {
 }
 
 /*----------------CARDS*/
-.cards-container {
+/* .cards-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
@@ -197,10 +197,10 @@ p {
 
 .leia-mais:hover {
 	background-color: #bbb;
-}
+} */
 
 /*--------------------- BOTOES DE PROXIMO*/
-.pagination {
+/* .pagination {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -230,4 +230,4 @@ p {
 .next-btn:focus {
 	outline: none;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
+} */

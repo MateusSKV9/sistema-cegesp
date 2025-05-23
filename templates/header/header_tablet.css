@@ -1,0 +1,32 @@
+@media (max-width: 900px) {
+  
+	/* REGRAS ESTRUTURAIS ***************************************************/
+    header {
+        flex-direction: column;
+        gap: 20px;
+        position: sticky;
+        .nav-header {
+            margin-bottom: 50px;
+            margin-top: -20px;
+            grid-template-columns: repeat(5,auto);
+            row-gap: 10px;
+            li{
+                border: 1px solid #eaeaea;
+                height: 40px;
+                font-size: 13px;
+            }
+            #login{
+                grid-column: 1/6;
+                border: none;           
+            }
+            #about,#news {
+                #about-menu, #news-menu { /* estilos dos ubmenus */
+                    li{
+                        border: none;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
