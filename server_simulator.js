@@ -41,8 +41,10 @@ function loadStyles(){
         addStyle('/pages/index.css');
         addStyle('/pages/index_tablet.css');
         addStyle('/pages/index_phone.css');
-    }else if(paginaAtual == ''){
-
+    }else if(paginaAtual == 'publicacoes.html'){
+      addStyle('/pages/publicacoes/publicacoes.css');
+      addStyle('/pages/publicacoes/publicacoes_tablet.css');
+      addStyle('/pages/publicacoes/publicacoes_phone.css');
     }
       
 }
