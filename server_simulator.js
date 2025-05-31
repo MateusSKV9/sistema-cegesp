@@ -51,6 +51,10 @@ function loadStyles() {
 		addStyle("/pages/objetivos/objetivos.css");
 		addStyle("/pages/objetivos/objetivos_tablet.css");
 		addStyle("/pages/objetivos/objetivos_phone.css");
+	} else if (paginaAtual == "equipe.html") {
+		addStyle("/pages/equipe/equipe.css");
+		addStyle("/pages/equipe/equipe_tablet.css");
+		addStyle("/pages/equipe/equipe_phone.css");
 	}
 }
 

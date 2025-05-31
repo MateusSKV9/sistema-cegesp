@@ -1,0 +1,5 @@
+@media screen and (max-width: 600px) {
+	.container-cards > a {
+		height: 450px;
+	}
+}
