@@ -38,9 +38,9 @@ function loadStyles(){
     /** Faz o carregamento seletivo dos estilos, de acordo com a página */
     const paginaAtual = window.location.pathname.split('/').pop(); // obtêm o nome do arquivo da página atual
     if(paginaAtual == 'index.html'){ // adiciona estilos da página index
-        addStyle('/pages/index.css');
-        addStyle('/pages/index_tablet.css');
-        addStyle('/pages/index_phone.css');
+        addStyle('/index.css');
+        addStyle('/index_tablet.css');
+        addStyle('/index_phone.css');
     }else if(paginaAtual == ''){
 
     }
