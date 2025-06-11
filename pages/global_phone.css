@@ -3,8 +3,8 @@
 	/* REGRAS ESTRUTURAIS ***************************************************/
 	main {
 		margin-top: 20vw;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
 	}
 
 	/* REGRAS TEXTUAIS ***************************************************/
@@ -12,16 +12,19 @@
 	h1{
 		font-family: var(--font-roboto-condensed);
 		font-size: calc(var(--h1-text-size) * 0.25vw);
+		margin-bottom: 3vw;
 	}
 	h2{
 		font-family: var(--font-roboto-condensed);
 		font-size: calc(var(--h2-text-size) * 0.2vw);
+		margin-bottom: 3vw;
 	}
 	p{
 		font-family: var(--font-roboto-condensed);
 		font-size: calc(var(--p-text-size) * 0.2vw);
 		margin-bottom: 3vw;
 		line-height: 5vw;
+		text-align: justify;
 		
 	}
 	hr {

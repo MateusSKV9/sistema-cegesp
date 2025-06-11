@@ -63,10 +63,12 @@ main {
 h1{
 	font-family: var(--font-roboto);
 	font-size: calc(var(--h1-text-size) * 1px);
+	margin-bottom: 18px;
 }
 h2{
-		font-family: var(--font-roboto);
-		font-size: calc(var(--h2-text-size) * 1px);
+	font-family: var(--font-roboto);
+	font-size: calc(var(--h2-text-size) * 1px);
+	margin-bottom: 18px;
 }
 p{
 	font-family: var(--font-poppins);

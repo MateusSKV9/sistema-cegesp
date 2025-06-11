@@ -1,5 +1,18 @@
 @media (max-width: 900px) {
+	/* REGRAS ESTRUTURAIS ***************************************************/
 	main {
 	    margin-top: 40px;
-    }
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	/* REGRAS TEXTUAIS ***************************************************/
+	h1{
+		font-size: calc(var(--h1-text-size) * 0.8px);
+	}
+	h2{
+			font-size: calc(var(--h2-text-size) * 0.8px);
+	}
+	p{
+		font-size: calc(var(--p-text-size) * 0.85px);
+	}
 }
