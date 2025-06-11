@@ -11,85 +11,172 @@
 		<header id="header">CARREGADO DINAMICAMENTE! NÃO MEXA!</header>
 
 		<main>
-			<h2>PESQUISA</h2>
+			<h1 class="separator-m">Publicações Científicas</h1>
+
+			<hr />
+
+			<div class="separator-m"></div>
+
 			<section class="section-forms">
+				<h2>PESQUISA</h2>
+
 				<form action="">
-					<input class="input" id="inome" type="text" placeholder="Nome do Trabalho" />
-					<select class="input" name="" id="iautor" title="Autor">
-						<option value="" disabled selected>Autor</option>
-						<option value=""></option>
+					<input class="input" id="inome" type="text" name="titulo" placeholder="Digite o nome do trabalho"/>
+
+					<select class="input" name="autor" id="iautor" title="Autor">
+						<option class="select-placeholder" value="" disabled selected>Selecione o autor</option>
+						<option value="joao-silva">João Silva</option>
+						<option value="maria-oliveira">Maria Oliveira</option>
+						<option value="ana-pereira">Ana Pereira</option>
+						<option value="carlos-souza">Carlos Souza</option>
 					</select>
-					<select class="input" name="" id="icategoria" title="Categoria">
-						<option value="" disabled selected>Categoria</option>
-						<option value=""></option>
+
+					<select class="input" name="categoria" id="icategoria" title="Categoria">
+						<option class="select-placeholder" value="" disabled selected>
+							Selecione a Categoria
+						</option>
+						<option value="educacao-fisica">Educação Física</option>
+						<option value="nutricao">Nutrição</option>
+						<option value="fisioterapia">Fisioterapia</option>
+						<option value="psicologia-esportiva">Psicologia Esportiva</option>
 					</select>
 				</form>
 			</section>
 
-			<h2>RESULTADO</h2>
+			<div class="separator-m"></div>
+
 			<section class="section-result">
-				<div class="result-item">
-					<div class="section-text">
-						<div class="title">
-							<h3>Title Artigo</h3>
-							<span class="nome-autor">Nome do autor</span>
-						</div>
-						<div class="text">
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquam eveniet
-								magni fuga, fugit perspiciatis, molestias animi, ducimus iusto consequuntur incidunt
-								est distinctio quam. Sunt, soluta repellat. Quo, tempora porro.
-							</p>
-							<p>Publicação: 00/00/0000</p>
-						</div>
-						<div class="information">
-							<span class="categoria">Categoria: tipo categoria</span>
-							<a href="#">Ler mais</a>
-						</div>
-					</div>
-				</div>
+				<h2>RESULTADO</h2>
 
-				<div class="result-item">
-					<div class="section-text">
-						<div class="title">
-							<h3>Title Artigo</h3>
-							<span class="nome-autor">Nome do autor</span>
+				<article class="article-result">
+					<div class="result-item">
+						<div class="item-title">
+							<h3>Avaliação da Flexibilidade em Atletas Universitários</h3>
+							<span>Educação Física</span>
 						</div>
-						<div class="text">
+	
+						<div class="item-main">
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquam eveniet
-								magni fuga, fugit perspiciatis, molestias animi, ducimus iusto consequuntur incidunt
-								est distinctio quam. Sunt, soluta repellat. Quo, tempora porro.
+								Este estudo investigou os níveis de flexibilidade em atletas universitários de
+								diferentes modalidades esportivas, comparando os resultados com padrões
+								internacionais.
 							</p>
-							<p>Publicação: 00/00/0000</p>
+	
+							<div class="item-information">
+								<span>Patrícia Andrade</span>
+								<span>Publicação: 12/03/2024</span>
+							</div>
 						</div>
-						<div class="information">
-							<span class="categoria">Categoria: tipo categoria</span>
-							<a href="#">Ler mais</a>
-						</div>
+	
+						<a href="#" class="item-button">Ler mais</a>
 					</div>
-				</div>
+	
+					<div class="result-item">
+						<div class="item-title">
+							<h3>Impacto da Alimentação Pré-Treino no Desempenho Muscular</h3>
+							<span>Nutrição</span>
+						</div>
+	
+						<div class="item-main">
+							<p>
+								A pesquisa analisou a influência de diferentes tipos de refeições pré-treino sobre o
+								desempenho muscular em treinos de resistência com amostras controladas.
+							</p>
+	
+							<div class="item-information">
+								<span>Rafael Lima</span>
+								<span>Publicação: 27/08/2023</span>
+							</div>
+						</div>
+	
+						<a href="#" class="item-button">Ler mais</a>
+					</div>
+	
+					<div class="result-item">
+						<div class="item-title">
+							<h3>Efeitos da Fisioterapia Pós-Cirúrgica em Lesões de Joelho</h3>
+							<span>Fisioterapia</span>
+						</div>
+	
+						<div class="item-main">
+							<p>
+								O artigo apresenta um estudo longitudinal com pacientes submetidos à cirurgia de LCA,
+								avaliando os ganhos funcionais após fisioterapia intensiva.
+							</p>
+	
+							<div class="item-information">
+								<span>Luciana Barbosa</span>
+								<span>Publicação: 05/11/2022</span>
+							</div>
+						</div>
+	
+						<a href="#" class="item-button">Ler mais</a>
+					</div>
+	
+					<div class="result-item">
+						<div class="item-title">
+							<h3>Psicologia Esportiva: Controle Emocional em Competições</h3>
+							<span>Psicologia Esportiva</span>
+						</div>
+	
+						<div class="item-main">
+							<p>
+								O artigo explora técnicas psicológicas aplicadas a atletas de alto rendimento para
+								lidar com pressão, ansiedade e foco durante eventos esportivos competitivos.
+							</p>
+	
+							<div class="item-information">
+								<span>Fernanda Reis</span>
+								<span>Publicação: 19/06/2023</span>
+							</div>
+						</div>
+	
+						<a href="#" class="item-button">Ler mais</a>
+					</div>
+	
+					<div class="result-item">
+						<div class="item-title">
+							<h3>Biomecânica da Corrida: Padrões de Movimento em Iniciantes</h3>
+							<span>Educação Física</span>
+						</div>
+	
+						<div class="item-main">
+							<p>
+								Esta análise biomecânica investigou o impacto da pisada e da postura em corredores
+								iniciantes, propondo ajustes para prevenir lesões comuns.
+							</p>
+	
+							<div class="item-information">
+								<span>Gustavo Almeida</span>
+								<span>Publicação: 03/01/2024</span>
+							</div>
+						</div>
+	
+						<a href="#" class="item-button">Ler mais</a>
+					</div>
+	
+					<div class="result-item">
+						<div class="item-title">
+							<h3>A Importância da Hidratação no Treinamento Funcional</h3>
+							<span>Nutrição</span>
+						</div>
+	
+						<div class="item-main">
+							<p>
+								O estudo mostra como diferentes estratégias de hidratação influenciam a performance em
+								treinos funcionais intensos, com foco na manutenção do equilíbrio térmico.
+							</p>
+	
+							<div class="item-information">
+								<span>Camila Rocha</span>
+								<span>Publicação: 22/09/2023</span>
+							</div>
+						</div>
+	
+						<a href="#" class="item-button">Ler mais</a>
+					</div>
+				</article>
 
-				<div class="result-item">
-					<div class="section-text">
-						<div class="title">
-							<h3>Title Artigo</h3>
-							<span class="nome-autor">Nome do autor</span>
-						</div>
-						<div class="text">
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aliquam eveniet
-								magni fuga, fugit perspiciatis, molestias animi, ducimus iusto consequuntur incidunt
-								est distinctio quam. Sunt, soluta repellat. Quo, tempora porro.
-							</p>
-							<p>Publicação: 00/00/0000</p>
-						</div>
-						<div class="information">
-							<span class="categoria">Categoria: tipo categoria</span>
-							<a href="#">Ler mais</a>
-						</div>
-					</div>
-				</div>
 			</section>
 		</main>
 

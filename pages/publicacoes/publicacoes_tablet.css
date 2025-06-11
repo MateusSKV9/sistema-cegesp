@@ -1,9 +1,11 @@
-@media screen and (max-width: 1026px) {
-    main {
-        margin-top: 120px;
-    }
+@media (max-width: 900px) {
+    .section-forms {
+        form {
+            grid-template-columns: 1fr;
 
-    .section-result {
-        width: 100%;
+            :nth-child(1) {
+                grid-column: span 1;
+            }
+        }
     }
 }

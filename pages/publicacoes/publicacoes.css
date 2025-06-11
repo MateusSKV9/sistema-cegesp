@@ -1,131 +1,145 @@
 @charset "UTF-8";
 
-main {
-	padding: 20px 50px;
-}
-
 h2 {
-	font-family: var(--font-roboto);
-	font-size: 1.8em;
 	font-weight: 300;
 	color: var(--color-dark-blue);
 }
 
 .section-forms {
-	width: 90%;
-	padding: 30px 50px;
-	background-color: whitesmoke;
-	border-radius: 10px;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(0, 0, 0, 0.089);
-}
-
-form {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 20px;
-}
-
-input {
-	outline: none;
-}
-
-form .input {
-	padding-bottom: 5px;
-	font-size: 1.2em;
-	color: black;
-	background-color: transparent;
-	border: none;
-	border-bottom: 2px solid var(--color-dark-blue);
-}
-
-form input::placeholder {
-	color: black;
-}
-
-#inome {
 	width: 100%;
-}
 
-#iautor {
-	width: 48%;
-}
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 
-#icategoria {
-	width: 48%;
+	form {
+		padding: 30px 50px;
+		border-radius: 10px;
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(0, 0, 0, 0.089);
+		background-color: whitesmoke;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		:nth-child(1) {
+			grid-column: span 2;
+		}
+
+		input::placeholder {
+			color: black;
+		}
+
+		.input {
+			padding-bottom: 5px;
+			font-size: 1.2em;
+			color: black;
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid var(--color-dark-blue);
+			outline: none;
+		}
+
+		select .select-placeholder {
+			display: none;
+		}
+	}
 }
 
 .section-result {
-	max-width: 90%;
-	margin: auto;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 30px;
-}
-
-.result-item {
-	min-height: 350px;
-	padding: 40px;
-	background-color: whitesmoke;
-	border-radius: 10px;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(0, 0, 0, 0.089);
-
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
-}
-
-.result-item img {
-	min-width: 300px;
-	background-color: #0b1e49;
-}
-
-.section-text {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.title {
-	display: flex;
-	flex-direction: column;
-}
-
-.title h3 {
-	font-size: 1.8em;
-	font-weight: 400;
-}
-
-.nome-autor {
-	font-size: 0.9em;
-}
-
-.section-text p {
-	text-align: justify;
-}
-
-.text {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-}
 
-.information {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
+	.article-result {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+		gap: 60px;
+	
+		.result-item {
+			min-width: 250px;
+			padding: 25px 30px;
+			font-family: var(--font-poppins);
+			font-weight: normal;
+			background-color: rgb(218, 218, 218);
+			border-radius: 10px;
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+			border: 1px solid rgba(0, 0, 0, 0.089);
+	
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 30px;
+	
+			&:hover{
+				background-color:rgb(240, 240, 240);
+				transition: ease 0.3s;
+			}
 
-.information a {
-	padding: 8px 16px;
-	color: var(--color-white-default);
-	background-color: var(--color-dark-blue);
-	border: none;
-	border-radius: 4px;
+			.item-title {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+	
+				h3 {
+					font-size: calc(20 * 1px);
+					font-weight: bold;
+				}
+	
+				span {
+					width: max-content;
+					padding: 4px 8px;
+					text-align: center;
+					font-size: calc(12 * 1px);
+					color: var(--color-white-default);
+					background-color: #424242;
+					border-radius: 8px;
+				}
+			}
+	
+			.item-main {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+	
+				p {
+					text-align: justify;
+				}
+	
+				.item-information {
+					font-size: calc(14 * 1px);
+	
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+	
+					:nth-child(1) {
+						font-size: calc(16 * 1px);
+						font-weight: 500;
+					}
+				}
+			}
+	
+			.item-button {
+				padding: 8px 16px;
+				color: var(--color-white-default);
+				font-size: calc(16 * 1px);
+				background-color: var(--high-blue);
+				text-align: center;
+				border: none;
+				border-radius: 12px;
+			}
+	
+			.item-button:hover {
+				background-color: #ffffff;
+				color: black;
+				transition: ease 0.3s;
+			}
+			
+		}
+		
+	}
+
 }
