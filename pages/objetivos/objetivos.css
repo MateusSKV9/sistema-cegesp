@@ -1,20 +1,20 @@
 main {
-	padding: 0 15px 80px;
-	max-width: 800px;
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: justify;
+	p {
+		text-align: justify;
+	}
 }
 
 .container-cards {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: 30px;
 
 	.card {
 		background-color: whitesmoke;
 		flex: 1 0 280px;
+		max-width: 360px;
 		padding: 15px;
 		border-radius: 10px;
 		display: flex;
@@ -60,5 +60,4 @@ main {
 hr {
 	border: none;
 	background-color: rgba(0, 0, 0, 0.5);
-
 }
