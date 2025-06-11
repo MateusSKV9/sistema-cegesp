@@ -8,14 +8,6 @@ main {
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0px;
-
-	.title {
-		font-family: var(--font-roboto), sans-serif;
-		font-weight: 600;
-		font-size: 30px;
-		color: #333;
-		margin-bottom: 10px;
-	}
 }
 
 .barra-pesquisa {

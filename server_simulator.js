@@ -1,3 +1,10 @@
+/** Função utilitária para obter o nome do arquivo da página onde o script é executado */
+function getPageName() {
+    const path = window.location.pathname;
+    const pagina = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    return pagina.replace('.html', '');
+}
+
 /** Função utilitária para carregar e injetar fragmento html em seletor específico
  * url - caminho do arquivo html a ser carregado
  * selector - seletor do elemento onde o html será injetado */
@@ -36,13 +43,15 @@ function loadStyles(){
     }));
  
     /** Faz o carregamento seletivo dos estilos, de acordo com a página */
-    const paginaAtual = window.location.pathname.split('/').pop(); // obtêm o nome do arquivo da página atual
-    if(paginaAtual == 'index.html'){ // adiciona estilos da página index
+    const pageName = getPageName(); // obtêm o nome do arquivo da página atual
+    if(pageName == 'index'){ // adiciona estilos da página index
         addStyle('/pages/index.css');
         addStyle('/pages/index_tablet.css');
         addStyle('/pages/index_phone.css');
-    }else if(paginaAtual == ''){
-
+    }else{
+        addStyle(`/pages/${pageName}/${pageName}.css`);
+        addStyle(`/pages/${pageName}/${pageName}_tablet.css`);
+        addStyle(`/pages/${pageName}/${pageName}_phone.css`);
     }
       
 }
