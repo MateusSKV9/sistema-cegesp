@@ -1,7 +1,5 @@
 @media (max-width: 700px) {
-	* {
-		font-size: 3vw;
-	}
+	
 
 	.noticiasHeader {
 		display: flex;

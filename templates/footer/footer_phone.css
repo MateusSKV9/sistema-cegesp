@@ -17,6 +17,9 @@
         #section-copyright {
             padding: 10vw 5vw;
             gap: 5vw;
+            p{
+                text-align: center;
+            }
             #section-images {
                 max-height: 100vw;
                 gap: 4vw;

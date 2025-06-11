@@ -1,6 +1,6 @@
 main {
-	padding: 20px 50px;
-}
+	
+
 
 .noticiasHeader {
 	width: 100%;
@@ -178,4 +178,5 @@ main {
 		outline: none;
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	}
+}
 }
