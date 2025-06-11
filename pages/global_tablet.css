@@ -12,6 +12,9 @@
 	h2{
 			font-size: calc(var(--h2-text-size) * 0.8px);
 	}
+	h3{
+			font-size: calc(var(--h3-text-size) * 0.8px);
+	}
 	p{
 		font-size: calc(var(--p-text-size) * 0.85px);
 	}

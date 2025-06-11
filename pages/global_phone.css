@@ -19,6 +19,11 @@
 		font-size: calc(var(--h2-text-size) * 0.2vw);
 		margin-bottom: 3vw;
 	}
+	h3{
+		font-family: var(--font-roboto-condensed);
+		font-size: calc(var(--h3-text-size) * 0.2vw);
+		margin-bottom: 3vw;
+	}
 	p{
 		font-family: var(--font-roboto-condensed);
 		font-size: calc(var(--p-text-size) * 0.2vw);

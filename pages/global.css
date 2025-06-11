@@ -22,6 +22,7 @@
 	/* TAMANHOS FONTES */
 	--h1-text-size: 32;
 	--h2-text-size: 26;
+	--h3-text-size: 22;
 	--p-text-size: 16;
 
 	/* FONTES */
@@ -68,6 +69,11 @@ h1{
 h2{
 	font-family: var(--font-roboto);
 	font-size: calc(var(--h2-text-size) * 1px);
+	margin-bottom: 18px;
+}
+h3{
+	font-family: var(--font-roboto);
+	font-size: calc(var(--h3-text-size) * 1px);
 	margin-bottom: 18px;
 }
 p{
