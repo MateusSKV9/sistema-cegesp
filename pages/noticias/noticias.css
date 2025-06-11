@@ -1,182 +1,174 @@
 main {
-	
-
-
-.noticiasHeader {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 0px;
-}
-
-.barra-pesquisa {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	max-width: 400px;
-	height: 40px;
-	background-color: #f0f0f0;
-	border-radius: 20px;
-	overflow: hidden;
-	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-
-	.search-input {
-		flex: 1;
-		height: 100%;
-		border: none;
-		padding: 0 15px;
-		font-size: 0.9rem;
-		color: #333;
-		background-color: transparent;
-		outline: none;
-		border-radius: 50px;
-	}
-
-	.search-button {
-		width: 50px;
-		height: 100%;
-		background-color: #314ae7;
-		border: none;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	}
-
-	.fa-search {
-		color: white;
-	}
-
-	.search-button:hover {
-		background-color: #666;
-	}
-}
-
-/*----------------CARDS*/
-.cards-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 20px;
-
-	.card {
-		background-color: #fff;
-		border-radius: 10px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		overflow: hidden;
-		transition: transform 0.3s ease;
+	.noticiasHeader {
+		width: 100%;
 		display: flex;
-		flex-direction: column;
 		justify-content: space-between;
-		padding: 10px;
+		align-items: center;
+		padding: 10px 0px;
+	}
 
-		.card-image img {
-			width: 100%;
-			height: 150px;
-			background-color: #888;
-			background-size: cover;
-			background-position: center;
-			overflow: hidden;
-		}
+	.barra-pesquisa {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 400px;
+		height: 40px;
+		background-color: #f0f0f0;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: inset 0 2px 4px #0000001a;
 
-		.card-content {
-			padding: 10px;
-		}
-
-		.card-head {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-
-			.categoria {
-				padding: 5px;
-				border-radius: 8px;
-				text-transform: uppercase;
-			}
-
-			.artg {
-				background: linear-gradient(120deg, #a1baff, #648dff);
-				color: #0e3190;
-			}
-
-			.pesq {
-				background: linear-gradient(120deg, #ffaaaa, #ff7474);
-				color: #960e0e;
-			}
-
-			.data {
-				font-size: 0.8rem;
-				color: #aaa;
-				text-align: right;
-			}
-		}
-
-		h2 {
-			margin-top: 10px;
-			font-size: 1.2rem;
-			color: #333;
-		}
-
-		p {
-			margin-top: 10px;
+		.search-input {
+			flex: 1;
+			height: 100%;
+			border: none;
+			padding: 0 15px;
 			font-size: 0.9rem;
-			color: #666;
+			color: #333;
+			background-color: transparent;
+			outline: none;
+			border-radius: 50px;
 		}
 
-		.leia-mais {
-			display: block;
+		.search-button {
+			width: 50px;
+			height: 100%;
+			background-color: #314ae7;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background-color: #666;
+			}
+		}
+	}
+
+	/*----------------CARDS*/
+	.cards-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 20px;
+
+		.card {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			transition: transform 0.3s ease;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			padding: 10px;
-			align-self: flex-start;
-			margin-top: auto;
-			margin-left: 10px;
-			margin-bottom: 10px;
+
+			.card-image img {
+				width: 100%;
+				height: 150px;
+				background-color: #888;
+				background-size: cover;
+				background-position: center;
+				overflow: hidden;
+			}
+
+			.card-content {
+				padding: 10px;
+
+				.card-head {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.categoria {
+						padding: 5px;
+						border-radius: 14px;
+						text-transform: uppercase;
+					}
+
+					.artg {
+						background: var(--highlight-blue);
+						color: white;
+					}
+
+					.pesq {
+						background: var(--high-blue);
+						color: white;
+					}
+
+					.date {
+						font-size: 0.8rem;
+						color: #aaa;
+						text-align: right;
+					}
+				}
+
+				h2 {
+					margin-top: 10px;
+					font-size: 1.2rem;
+					color: #333;
+				}
+
+				p {
+					margin-top: 10px;
+					font-size: 0.9rem;
+					color: #666;
+				}
+			}
+			.leia-mais {
+				display: block;
+				padding: 10px;
+				align-self: flex-start;
+				margin-top: auto;
+				margin-left: 10px;
+				margin-bottom: 10px;
+				background-color: #ccc;
+				border: none;
+				border-radius: 30px;
+				color: #333;
+				font-size: 0.8rem;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			.leia-mais:hover {
+				background-color: #bbb;
+			}
+		}
+
+		.card:hover {
+			transform: scale(1.02);
+		}
+	}
+
+	/*--------------------- BOTOES DE PROXIMO*/
+	.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+		gap: 10px;
+
+		.page-btn,
+		.next-btn {
+			padding: 10px 15px;
 			background-color: #ccc;
 			border: none;
-			border-radius: 30px;
+			border-radius: 5px;
 			color: #333;
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 			cursor: pointer;
 			transition: background-color 0.3s ease;
 		}
 
-		.leia-mais:hover {
+		.page-btn:hover,
+		.next-btn:hover {
 			background-color: #bbb;
+			transform: scale(1.05);
+		}
+
+		.page-btn:focus,
+		.next-btn:focus {
+			outline: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 		}
 	}
-
-	.card:hover {
-		transform: scale(1.02);
-	}
-}
-
-/*--------------------- BOTOES DE PROXIMO*/
-.pagination {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 20px;
-	gap: 10px;
-
-	.page-btn,
-	.next-btn {
-		padding: 10px 15px;
-		background-color: #ccc;
-		border: none;
-		border-radius: 5px;
-		color: #333;
-		font-size: 0.9rem;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	}
-
-	.page-btn:hover,
-	.next-btn:hover {
-		background-color: #bbb;
-		transform: scale(1.05);
-	}
-
-	.page-btn:focus,
-	.next-btn:focus {
-		outline: none;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-	}
-}
 }

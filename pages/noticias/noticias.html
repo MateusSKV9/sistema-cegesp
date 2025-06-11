@@ -4,9 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CEGESP</title>
-		<link rel="stylesheet" href="noticias.css" />
-		<link rel="stylesheet" href="noticias_tablet.css" />
-		<link rel="stylesheet" href="noticias_phone.css" />
 		<style>
 			html {
 				display: none;
@@ -24,7 +21,7 @@
 				</div>
 				<div class="barra-pesquisa">
 					<input type="text" class="search-input" placeholder="Artigos sobre..." />
-					<button class="search-button fas fa-search" title="Pesquisar"></button>
+					<button class="search-button" title="Pesquisar"></button>
 				</div>
 			</section>
 			<div class="cards-container">
@@ -184,11 +181,13 @@
 				</a>
 			</div>
 			<!--cards container-->
-			<div class="pagination">
-				<button class="page-btn">1</button>
-				<button class="page-btn">2</button>
-				<button class="page-btn">3</button>
-				<button class="next-btn">Ver próximos</button>
+
+				<nav class="pagination" aria-label="Paginação">
+					<button class="page-btn">1</button>
+					<button class="page-btn">2</button>
+					<button class="page-btn">3</button>
+					<button class="next-btn">Ver próximos</button>
+				</nav>
 			</div>
 		</main>
 
