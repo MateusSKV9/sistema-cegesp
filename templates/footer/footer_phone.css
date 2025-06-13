@@ -1,32 +1,51 @@
 @media (max-width: 600px) {
+	/* REGRAS ESTRUTURAIS ***************************************************/
+	footer {
+		margin-top: 15vw;
 
-    /* REGRAS ESTRUTURAIS ***************************************************/
-    footer {
-        margin-top: 15vw;
-        #section-contacts {
-            padding: 5vw 0;
-            gap: 5vw;
-            .contacts-item {
-                max-width: 95vw;
-                gap: 1vw;
-                img{
-                    width: 6vw;
-                }
-            }
-        }
-        #section-copyright {
-            padding: 10vw 5vw;
-            gap: 5vw;
-            p{
-                text-align: center;
-            }
-            #section-images {
-                max-height: 100vw;
-                gap: 4vw;
-                img {
-                    max-width: 30vw;
-                }
-            }
-        }
-    }
+		p {
+			font-size: 2.5vw;
+			line-height: normal;
+			text-align: center;
+		}
+
+		#section-contacts {
+			padding: 6vw 4vw;
+			gap: 5vw;
+
+			justify-content: space-between;
+
+			.contacts-item {
+				max-width: 95vw;
+				gap: 5vw;
+
+				img {
+					width: 6vw;
+					height: 6vw;
+				}
+			}
+		}
+
+		hr {
+			height: 0.2vw;
+		}
+
+		#section-copyright {
+			padding: 6vw 5vw;
+			gap: 3vw;
+
+			p {
+				font-size: 1.8vw;
+			}
+
+			#section-images {
+				max-height: 100vw;
+				gap: 4vw;
+
+				img {
+					max-width: 15vw;
+				}
+			}
+		}
+	}
 }
