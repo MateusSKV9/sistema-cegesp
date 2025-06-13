@@ -3,6 +3,8 @@
 	footer {
 		#section-contacts {
 			padding: 60px 15px;
+
+			justify-content: space-around;
 		}
 
 		#section-copyright {
