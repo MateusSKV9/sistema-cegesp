@@ -1,11 +1,11 @@
 @media (max-width: 900px) {
-    .section-forms {
-        form {
-            grid-template-columns: 1fr;
+	.section-forms {
+		form {
+			grid-template-columns: 1fr;
 
-            :nth-child(1) {
-                grid-column: span 1;
-            }
-        }
-    }
+			:nth-child(1) {
+				grid-column: span 1;
+			}
+		}
+	}
 }
