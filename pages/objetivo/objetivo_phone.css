@@ -1,6 +1,24 @@
 @media screen and (max-width: 600px) {
 	.container-cards {
-		width: 80%;
+		width: 90%;
 		flex-direction: column;
+		align-items: center;
+    gap: 10vw;
+
+		.card {
+			margin-top: auto;
+			margin-bottom: 0;
+			flex: 1 0 auto;
+			padding: 5vw;
+			border-radius: 3vw;
+			gap: 3vw;
+			box-shadow: 0 0 1vw 1vw rgba(67, 67, 67, 0.1);
+
+			.box-svg {
+				width: 20vw;
+				height: 20vw;
+				padding: 2vw;
+			}
+		}
 	}
 }

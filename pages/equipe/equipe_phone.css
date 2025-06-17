@@ -1,5 +1,50 @@
 @media screen and (max-width: 600px) {
-	.container-cards > a {
-		height: 450px;
+	.container-cards {
+		row-gap: 15vw;
+		justify-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 70%));
+
+		a {
+			height: auto;
+			width: 90%;
+		}
+
+		.card {
+			width: 100%;
+			aspect-ratio: 1 / 1.5;
+			border-radius: 1.5vw;
+
+			img {
+				border-radius: 1.5vw;
+			}
+
+			.card-infor {
+				width: max-content;
+				position: absolute;
+				border: 1px solid white;
+				bottom: -5%;
+				right: -5%;
+				padding: 1vw 0px 1vw 2vw;
+				gap: 1vw;
+				align-items: flex-end;
+				align-content: flex-end;
+				justify-content: flex-end;
+
+				h2 {
+					font-size: calc(var(--h2-text-size) * 0.25vw);
+					margin-left: 0;
+					margin-top: 0;
+					margin-right: 2vw;
+					align-self: flex-start;
+				}
+
+				span {
+					padding: 1vw 2vw;
+					font-size: 3vw;
+					margin-right: -0px;
+					text-align: center;
+				}
+			}
+		}
 	}
 }
