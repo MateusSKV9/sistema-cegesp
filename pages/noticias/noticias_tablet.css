@@ -26,36 +26,15 @@
 		}
 
 		.cards-container {
-			display: grid;
 			grid-template-columns: 1fr 1fr;
-			place-items: center;
-			gap: 1vw;
 
 			.card {
 				width: 90%;
-				height: auto;
-				display: flex;
-				padding: 2vw;
-
-				.card-image {
-					overflow: hidden;
-					position: relative;
-
-					img {
-						width: 100%;
-						height: 80%;
-						object-fit: cover;
-						object-position: center;
-					}
-				}
 
 				.card-content {
 					padding: 2vw;
 
 					.card-head {
-						.categoria {
-							padding: 0.5vw;
-						}
 
 						.date {
 							font-size: 2vw;
