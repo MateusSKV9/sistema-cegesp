@@ -48,6 +48,10 @@ function loadStyles(){
         addStyle('/pages/index.css');
         addStyle('/pages/index_tablet.css');
         addStyle('/pages/index_phone.css');
+    }else if(pageName == 'noticia_modelo'){
+        addStyle('/pages/noticias/single/noticia_modelo.css');
+        addStyle('/pages/noticias/single/noticia_modelo_tablet.css');
+        addStyle('/pages/noticias/single/noticia_modelo_phone.css');
     }else{
         addStyle(`/pages/${pageName}/${pageName}.css`);
         addStyle(`/pages/${pageName}/${pageName}_tablet.css`);

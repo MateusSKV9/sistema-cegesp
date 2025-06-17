@@ -1,56 +1,70 @@
 @media (max-width: 900px) {
-
-	.noticiasHeader {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-	}
-
-	article h2 {
-		font-size: 4vw;
-	}
-
-	.noticia-head {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	main .cards-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		place-items: center;
-
-		.card {
-			width: 90%;
-			height: auto;
+	main {
+		.noticiasHeader {
 			display: flex;
-			flex-direction: row;
-			.card-image {
-				overflow: hidden;
-				position: relative;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
 
-				img {
-					width: 80%;
-					height: 80%;
-					object-fit: cover;
-					object-position: center;
+			.title {
+				font-size: 4vw;
+			}
+
+			.barra-pesquisa {
+				max-width: 200vw;
+				height: 8vw;
+
+				.search-input {
+					padding: 0 5vw;
+					font-size: 3vw;
+				}
+
+				.search-button {
+					width: 8vw;
 				}
 			}
+		}
 
-			.leia-mais {
-				display: none;
+		.cards-container {
+			grid-template-columns: 1fr 1fr;
+
+			.card {
+				width: 90%;
+
+				.card-content {
+					padding: 2vw;
+
+					.card-head {
+
+						.date {
+							font-size: 2vw;
+						}
+					}
+
+					h2 {
+						font-size: 3.4vw;
+					}
+					p {
+						font-size: 2vw;
+						text-align: justify;
+					}
+				}
+
+				.leia-mais {
+					display: none;
+				}
 			}
 		}
-	}
-}
 
-@media (max-width: 600px) {
-	main {
-		padding: 10px;
-	}
-	article {
-		padding: 10px;
+		.pagination {
+			margin-top: 7vw;
+			gap: 3vw;
+
+			.page-btn,
+			.next-btn {
+				padding: 2vw 2.2vw;
+				font-size: 4vw;
+			}
+		}
 	}
 }
