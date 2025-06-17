@@ -48,9 +48,9 @@ function loadStyles() {
 		addStyle("/pages/index_tablet.css");
 		addStyle("/pages/index_phone.css");
 	} else if (paginaAtual == "objetivo.html") {
-		addStyle("/pages/objetivos/objetivos.css");
-		addStyle("/pages/objetivos/objetivos_tablet.css");
-		addStyle("/pages/objetivos/objetivos_phone.css");
+		addStyle("/pages/objetivo/objetivo.css");
+		addStyle("/pages/objetivo/objetivo_tablet.css");
+		addStyle("/pages/objetivo/objetivo_phone.css");
 	} else if (paginaAtual == "equipe.html") {
 		addStyle("/pages/equipe/equipe.css");
 		addStyle("/pages/equipe/equipe_tablet.css");

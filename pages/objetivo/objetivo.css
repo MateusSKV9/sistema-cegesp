@@ -7,7 +7,7 @@ main {
 .container-cards {
 	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: stretch;
 	flex-wrap: wrap;
 	gap: 30px;
