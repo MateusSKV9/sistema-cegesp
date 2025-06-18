@@ -7,13 +7,15 @@
 			grid-template-columns: 1fr;
 			gap: 4vw;
 
-			:nth-child(1) {
-				grid-column: span 1;
-			}
-
 			.input {
 				font-size: 3.5vw;
 				padding-bottom: 1vw;
+
+			button {
+				width: 100%;
+				padding: 1vw 2vw;
+				font-size: 3vw;
+				border-radius: 1vw;
 			}
 		}
 	}
@@ -23,7 +25,7 @@
 
 		.article-result {
 			grid-template-columns: 1fr;
-			gap: 4vw;
+			gap: 10vw;
 
 			.result-item {
 				min-width: 100%;

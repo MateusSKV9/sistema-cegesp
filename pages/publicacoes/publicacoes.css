@@ -27,6 +27,10 @@ h2 {
 			grid-column: span 2;
 		}
 
+		:nth-child(4) {
+			grid-column: span 2;
+		}
+
 		input::placeholder {
 			color: black;
 		}
@@ -44,21 +48,32 @@ h2 {
 		select .select-placeholder {
 			display: none;
 		}
+
+		button {
+			width: 250px;
+			margin: auto;
+			padding: 6px 8px;
+			font-size: 16px;
+			color: var(--color-white-default);
+			background-color: var(--color-dark-blue);
+			border: none;
+			border-radius: 5px;
+		}
 	}
 }
 
 .section-result {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
 
 	.article-result {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-		gap: 60px;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
 
 		.result-item {
-			min-width: 250px;
 			padding: 25px 30px;
 			font-family: var(--font-poppins);
 			font-weight: normal;
