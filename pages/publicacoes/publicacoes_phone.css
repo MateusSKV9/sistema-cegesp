@@ -4,12 +4,15 @@
 
 		form {
 			padding: 5vw 6vw;
+			border-radius: 2vw;
 			grid-template-columns: 1fr;
 			gap: 4vw;
 
 			.input {
 				font-size: 3.5vw;
 				padding-bottom: 1vw;
+				border-bottom-width: 0.5vw;
+			}
 
 			button {
 				width: 100%;
@@ -30,6 +33,7 @@
 			.result-item {
 				min-width: 100%;
 				padding: 6vw;
+				border-radius: 2vw;
 				gap: 5vw;
 
 				.item-title {
