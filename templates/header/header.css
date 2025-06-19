@@ -29,6 +29,7 @@ header {
 	#menu-toggle,#menu-checkbox {
 		display: none;
 	}
+  
 	.nav-header {
 		display: grid;
 		grid-template-columns: repeat(6,auto);
