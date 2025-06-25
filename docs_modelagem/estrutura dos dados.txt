@@ -1,0 +1,46 @@
+(ESFERA)
+-Federal
+    (PODER)
+    .Executivo - "Presidente"
+        (AGENDAS)
+        * administrativa
+            DOCUMENTOS: {LOA,PPA,LDO,Decretos,Portarias}
+        * retórica
+            DOCUMENTOS: {plano de governo,mensagem presidencial,mensagem anual}
+    .Legislativo - "Senadores e deputados federais"
+        (AGENDAS)
+        * leis
+            DOCUMENTOS: {leis}
+        * projetos de leis
+            DOCUMENTOS: {projetos de leis}
+    .Judiciário - "Ministros"
+        (AGENDAS)
+        * "Dicutir com TOM sobre essa agenda"
+-ESTADUAL
+    (PODER)
+    .Executivo - "Governador"
+        (AGENDAS)
+        * administrativa
+            DOCUMENTOS: {LOA,PPA,LDO,Decretos,Portarias}
+        * retórica
+            DOCUMENTOS: {plano de governo,mensagem do governador,mensagem anual}
+    .Legislativo - "Deputados estaduais"
+        (AGENDAS)
+        * leis
+            DOCUMENTOS: {leis}
+        * projetos de leis
+            DOCUMENTOS: {projetos de leis}
+-MUNICIPAL
+    (PODER)
+    .Executivo - "Prefeito"
+        (AGENDAS)
+        * administrativa
+            DOCUMENTOS: {LOA,PPA,LDO,Lei orgânica}
+        * retórica
+            DOCUMENTOS: {plano de governo,mensagem do prefeito,"mensagem anual"*}
+    .Legislativo - "Vereadores"
+        (AGENDAS)   
+        * leis
+            DOCUMENTOS: {leis}
+        * projetos de leis
+            DOCUMENTOS: {projetos de leis}
