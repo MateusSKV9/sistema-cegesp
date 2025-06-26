@@ -4,15 +4,25 @@
     .Executivo - "Presidente"
         (AGENDAS)
         * administrativa
-            DOCUMENTOS: {LOA,PPA,LDO,Decretos,Portarias}
+            DOCUMENTOS:
+                -> LOA (tipo de dado: "valor")
+                -> PPA (tipo de dado: "valor")
+                -> LDO (tipo de dado: "menção")
+                -> Decretos (tipo de dado: "menção")
+                -> Portarias (tipo de dado: "menção")
         * retórica
-            DOCUMENTOS: {plano de governo,mensagem presidencial,mensagem anual}
+            DOCUMENTOS:
+                -> plano de governo (tipo de dado: "menção")
+                -> mensagem presidencial (tipo de dado: "menção")
+                -> mensagem anual (tipo de dado: "menção")
     .Legislativo - "Senadores e deputados federais"
         (AGENDAS)
         * leis
-            DOCUMENTOS: {leis}
+            DOCUMENTOS:
+                -> leis (tipo de dado: "menção")
         * projetos de leis
-            DOCUMENTOS: {projetos de leis}
+            DOCUMENTOS:
+                -> projetos de leis (tipo de dado: "menção")
     .Judiciário - "Ministros"
         (AGENDAS)
         * "Dicutir com TOM sobre essa agenda"
@@ -21,26 +31,45 @@
     .Executivo - "Governador"
         (AGENDAS)
         * administrativa
-            DOCUMENTOS: {LOA,PPA,LDO,Decretos,Portarias}
+            DOCUMENTOS:
+                -> LOA (tipo de dado: "valor")
+                -> PPA (tipo de dado: "valor")
+                -> LDO (tipo de dado: "menção")
+                -> Decretos (tipo de dado: "menção")
+                -> Portarias (tipo de dado: "menção")
         * retórica
-            DOCUMENTOS: {plano de governo,mensagem do governador,mensagem anual}
+            DOCUMENTOS:
+                -> plano de governo (tipo de dado: "menção")
+                -> mensagem do governador (tipo de dado: "menção")
+                -> mensagem anual (tipo de dado: "menção")
     .Legislativo - "Deputados estaduais"
         (AGENDAS)
         * leis
-            DOCUMENTOS: {leis}
+            DOCUMENTOS:
+                -> leis (tipo de dado: "menção")
         * projetos de leis
-            DOCUMENTOS: {projetos de leis}
+            DOCUMENTOS:
+                -> projetos de leis (tipo de dado: "menção")
 -MUNICIPAL
     (PODER)
     .Executivo - "Prefeito"
         (AGENDAS)
         * administrativa
-            DOCUMENTOS: {LOA,PPA,LDO,Lei orgânica}
+            DOCUMENTOS:
+                -> LOA (tipo de dado: "valor")
+                -> PPA (tipo de dado: "valor")
+                -> LDO (tipo de dado: "menção")
+                -> lei orgânica (tipo de dado: "menção")
         * retórica
-            DOCUMENTOS: {plano de governo,mensagem do prefeito,"mensagem anual"*}
+            DOCUMENTOS:
+                -> plano de governo (tipo de dado: "menção")
+                -> mensagem do prefeito (tipo de dado: "menção")
+                -> mensagem anual* (tipo de dado: "menção")
     .Legislativo - "Vereadores"
         (AGENDAS)   
         * leis
-            DOCUMENTOS: {leis}
+            DOCUMENTOS:
+                -> leis (tipo de dado: "menção")
         * projetos de leis
-            DOCUMENTOS: {projetos de leis}
+            DOCUMENTOS:
+                -> projetos de leis (tipo de dado: "menção")
