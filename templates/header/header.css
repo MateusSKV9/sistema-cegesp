@@ -77,6 +77,17 @@ header {
 		#about,
 		#news {
 			position: relative; /* necessário para o submenu funcionar*/
+
+			@media (min-width: 901px) {
+				&:hover,
+				&:hover {
+					#about-menu,
+					#news-menu {
+						display: flex; /* necessário para o submenu funcionar*/
+					}
+				}
+			}
+
 			#about-menu,
 			#news-menu {
 				/* estilos dos ubmenus */
@@ -92,14 +103,17 @@ header {
 				padding: 12px 20px;
 				top: 100%;
 				z-index: 2;
+
 				li {
 					text-align: center;
 					color: var(--color-text);
 					padding: 5px 0;
 				}
+
 				li:hover {
 					color: var(--color-text-hover);
 				}
+
 				li:not(:last-child) {
 					padding-bottom: 6px;
 					border-bottom: 1px solid black;
