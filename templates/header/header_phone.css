@@ -6,7 +6,6 @@
 		box-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.3);
 		gap: 20px;
 		position: fixed;
-		padding-bottom: 5vw;
 
 		#container-logo {
 			gap: 1.5vw;
@@ -20,10 +19,6 @@
 			}
 		}
 
-		#menu-checkbox:checked ~ .nav-group {
-			display: flex;
-		}
-
 		.menu-toggle {
 			position: absolute;
 			top: 3vw;
@@ -33,6 +28,7 @@
 			height: max-content;
 			cursor: pointer;
 			z-index: 2;
+			padding: 1vw;
 
 			span {
 				display: block;
@@ -45,7 +41,8 @@
 		}
 
 		.nav-group {
-			display: none;
+			display: flex;
+			overflow: hidden;
 
 			.nav-header {
 				display: flex;
@@ -56,6 +53,13 @@
 				margin-top: 0;
 				margin-bottom: 0px;
 				row-gap: 4vw;
+				max-height: 0;
+				transition: max-height 0.3s ease-in-out;
+
+				&.active {
+					max-height: 500px;
+					padding-bottom: 5vw;
+				}
 
 				li {
 					font-size: 4vw;
@@ -74,14 +78,14 @@
 
 				#about,
 				#news {
-          gap: 3vw;
-          flex-direction: column;
-          
+					gap: 3vw;
+					flex-direction: column;
+
 					#about-menu,
 					#news-menu {
-            gap: 2vw;
-            align-items: center;
-            width: 100%;
+						gap: 2vw;
+						align-items: center;
+						width: 100%;
 						position: static;
 					}
 				}

@@ -25,20 +25,21 @@ header {
 			color: var(--midlle-blue);
 		}
 	}
-	
-	#menu-toggle,#menu-checkbox {
+
+	#menu-toggle,
+	#menu-checkbox {
 		display: none;
 	}
-  
+
 	.nav-header {
 		display: grid;
-		grid-template-columns: repeat(6,auto);
+		grid-template-columns: repeat(6, auto);
 		align-items: center;
 		justify-items: center;
 		gap: 5px;
 		list-style: none;
 		height: 45px;
-		li{
+		li {
 			display: flex;
 			align-items: center;
 			text-align: center;
@@ -46,15 +47,15 @@ header {
 			height: 100%;
 			font-size: 15px;
 			cursor: pointer;
-			a{
+			a {
 				transition: all 0.15s ease;
 			}
 		}
 		li:hover {
 			text-shadow: 0px 1px 1px var(--color-white-default);
 		}
-		#login{
-			#login-a{
+		#login {
+			#login-a {
 				background-color: var(--high-blue);
 				background-image: linear-gradient(to bottom, var(--high-blue) 50%, #2665ed 50%);
 				border-radius: 5px;
@@ -68,15 +69,17 @@ header {
 				transform: translateY(1px);
 				background: #2665ed;
 			}
-	
+
 			#login-a:active {
 				transform: scale(0.98);
 			}
-
 		}
-		#about,#news {
+		#about,
+		#news {
 			position: relative; /* necessário para o submenu funcionar*/
-			#about-menu, #news-menu { /* estilos dos ubmenus */
+			#about-menu,
+			#news-menu {
+				/* estilos dos ubmenus */
 				width: max-content;
 				position: absolute;
 				background-color: var(--color-white-default);
@@ -89,7 +92,7 @@ header {
 				padding: 12px 20px;
 				top: 100%;
 				z-index: 2;
-				li{
+				li {
 					text-align: center;
 					color: var(--color-text);
 					padding: 5px 0;
@@ -103,19 +106,14 @@ header {
 				}
 			}
 		}
-		#about:hover,#news:hover {
-			#about-menu, #news-menu {
-				display: flex; /* necessário para o submenu funcionar*/
-			}
-		}
-		.hover-btn:hover{
+
+		.hover-btn:hover {
 			background-color: #eaeaea;
 			color: var(--color-text-hover);
 		}
 	}
 }
 
-
-
-
-
+.show {
+	display: flex !important;
+}
