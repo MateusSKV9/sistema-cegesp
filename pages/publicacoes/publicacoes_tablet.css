@@ -6,6 +6,16 @@
 			:nth-child(1) {
 				grid-column: span 1;
 			}
+
+			:nth-child(4) {
+				grid-column: span 1;
+			}
+		}
+	}
+
+	.section-result {
+		.article-result {
+			grid-template-columns: 1fr;
 		}
 	}
 }

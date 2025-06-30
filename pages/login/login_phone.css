@@ -1,0 +1,58 @@
+@media (max-width: 600px) {
+	main {
+		width: 90%;
+		gap: 6vw;
+
+		#container-logo {
+			gap: 2vw;
+
+			img {
+				width: 20vw;
+			}
+
+			span {
+				font-size: 5vw;
+			}
+		}
+
+		form {
+			width: 100%;
+			padding: 5vw 6vw;
+			border-radius: 1vw;
+
+			gap: 3vw;
+
+			section {
+				gap: 2vw;
+
+				label {
+					font-size: 3vw;
+				}
+
+				input {
+					height: 7vw;
+					font-size: 3vw;
+					border-radius: 0.8vw;
+				}
+			}
+
+			#buttons {
+				button {
+					padding: 1.8vw 8vw;
+					font-size: 3vw;
+					border-radius: 0.8vw;
+				}
+
+				a {
+					padding: 1vw 8vw;
+					font-size: 3vw;
+					border-radius: 0.8vw;
+				}
+			}
+		}
+
+		a {
+			font-size: 3vw;
+		}
+	}
+}

@@ -13,8 +13,8 @@ h2 {
 	gap: 30px;
 
 	form {
-		padding: 30px 50px;
-		border-radius: 8px;
+		padding: 30px;
+		border-radius: 5px;
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 		border: 1px solid rgba(0, 0, 0, 0.089);
 		background-color: whitesmoke;
@@ -24,6 +24,10 @@ h2 {
 		gap: 30px;
 
 		:nth-child(1) {
+			grid-column: span 2;
+		}
+
+		:nth-child(4) {
 			grid-column: span 2;
 		}
 
@@ -44,26 +48,42 @@ h2 {
 		select .select-placeholder {
 			display: none;
 		}
+
+		button {
+			width: 250px;
+			margin: auto;
+			padding: 6px 8px;
+			font-size: 16px;
+			color: var(--color-white-default);
+			background-color: var(--color-dark-blue);
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #09183b;
+			}
+		}
 	}
 }
 
 .section-result {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
 
 	.article-result {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-		gap: 60px;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
 
 		.result-item {
-			min-width: 250px;
 			padding: 25px 30px;
 			font-family: var(--font-poppins);
 			font-weight: normal;
 			background-color: rgb(218, 218, 218);
-			border-radius: 8px;
+			border-radius: 5px;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 			border: 1px solid rgba(0, 0, 0, 0.089);
 
@@ -94,7 +114,7 @@ h2 {
 					font-size: 12px;
 					color: var(--color-white-default);
 					background-color: #424242;
-					border-radius: 8px;
+					border-radius: 5px;
 				}
 			}
 
@@ -129,7 +149,7 @@ h2 {
 				background-color: var(--high-blue);
 				text-align: center;
 				border: none;
-				border-radius: 12px;
+				border-radius: 6px;
 
 				&:hover {
 					background-color: #2064f8;
