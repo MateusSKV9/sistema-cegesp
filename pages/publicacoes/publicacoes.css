@@ -58,6 +58,11 @@ h2 {
 			background-color: var(--color-dark-blue);
 			border: none;
 			border-radius: 5px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #09183b;
+			}
 		}
 	}
 }
