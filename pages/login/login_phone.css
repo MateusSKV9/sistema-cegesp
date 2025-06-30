@@ -31,20 +31,19 @@
 
 				input {
 					height: 7vw;
-					font-size: 3vw;
-					border-radius: 0.8vw;
-				}
-			}
-
-			#buttons {
-				button {
-					padding: 1.8vw 8vw;
+					padding: 4vw 8vw;
 					font-size: 3vw;
 					border-radius: 0.8vw;
 				}
 
 				a {
-					padding: 1vw 8vw;
+					font-size: 3vw;
+				}
+			}
+
+			#buttons {
+				.style-button {
+					padding: 1.8vw 8vw;
 					font-size: 3vw;
 					border-radius: 0.8vw;
 				}
