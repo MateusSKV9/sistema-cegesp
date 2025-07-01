@@ -1,30 +1,50 @@
 @media (max-width: 600px) {
+	main {
+		article {
+			padding: 6vw 4vw;
 
-  main {
-    width: 100%;
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    box-sizing: border-box;
-  }
+			.header-noticia {
+				width: 100%;
+				height: 50vw;
 
-  article h2 {
-    font-size: 6.24vw;
-  }
+				.cabecalho {
+					padding: 0 4vw;
 
-  article .data {
-    font-size: 3.12vw;
-  }
+					p {
+						text-align: center;
+					}
+					h1 {
+						font-size: 6vw;
+						font-weight: 700;
+						padding: 2vw 0;
+					}
 
-  article .categoria {
-    width: auto;
-    padding: 1.3vw 2.6vw;
-  }
+					.subtitle {
+						font-size: 3.5vw;
+						margin-top: 2vw;
+					}
 
-  article .main-noticia {
-    padding: 2.6vw;
-  }
+					.data {
+						font-size: 3.8vw;
+						font-weight: 400;
+						margin-top: 3vw;
+						padding: 1vw 0;
+					}
+
+					.categoria {
+						padding: 1.5vw 2vw;
+						border-radius: 3vw;
+						width: 18vw;
+						margin-top: 4vw;
+						align-content: center;
+						align-items: center;
+					}
+				}
+			}
+
+			.main-noticia {
+				padding: 6vw 4vw;
+			}
+		}
+	}
 }

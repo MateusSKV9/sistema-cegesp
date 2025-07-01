@@ -1,0 +1,46 @@
+@media (max-width: 900px) {
+	main {
+		article {
+			padding: 4vw 2.67vw;
+
+			.header-noticia {
+				width: 100%;
+				height: 40vw;
+
+				.cabecalho {
+					padding: 0 2.67vw;
+
+					h1 {
+						font-size: 4.8vw;
+						font-weight: 700;
+						padding: 1.33vw;
+					}
+
+					.subtitle {
+						font-size: 1.33vw;
+						margin-top: 1.33vw;
+					}
+
+					.data {
+						font-size: 1.87vw;
+						font-weight: 400;
+						margin-top: 2.67vw;
+						padding: 1.33vw;
+					}
+
+					.categoria {
+						padding: 0.93vw;
+						border-radius: 1.6vw;
+						width: 9.33vw;
+						margin-top: 3.33vw;
+					}
+				}
+			}
+
+			.main-noticia {
+				padding: 4vw 2.67vw;
+				line-height: 1.6;
+			}
+		}
+	}
+}
