@@ -41,6 +41,11 @@ main {
 			&:hover {
 				background-color: #666;
 			}
+
+			img {
+				width: 20px;
+				height: 20px;
+			}
 		}
 	}
 
@@ -85,7 +90,7 @@ main {
 						padding: 5px;
 						border-radius: 14px;
 						text-transform: uppercase;
-						padding:  5px 10px;
+						padding: 5px 10px;
 					}
 
 					.artg {
