@@ -42,6 +42,8 @@
 
 		.nav-group {
 			display: flex;
+			justify-content: center;
+			width: 100%;
 			overflow: hidden;
 
 			.nav-header {
