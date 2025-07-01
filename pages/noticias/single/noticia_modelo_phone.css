@@ -10,6 +10,9 @@
 				.cabecalho {
 					padding: 0 4vw;
 
+					p {
+						text-align: center;
+					}
 					h1 {
 						font-size: 6vw;
 						font-weight: 700;
