@@ -41,8 +41,6 @@ main {
 			&:hover {
 				background-color: #666;
 			}
-		}
-	}
 
 			img {
 				width: 20px;
@@ -50,7 +48,6 @@ main {
 			}
 		}
 	}
-
 
 	/*----------------CARDS*/
 	.cards-container {
@@ -95,7 +92,6 @@ main {
 						text-transform: uppercase;
 
 						padding: 5px 10px;
-
 					}
 
 					.artg {
