@@ -4,12 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>Banco de Dados com sql.js</h1>
+    <p>O resultado da sua query aparecerá abaixo:</p>
+    <pre id="output">Carregando...</pre>
+    <script src="/_database/sql-wasm.js"></script>
     <script>
+    // Função principal assíncrona para lidar com o carregamento
+    async function run() {
+        const outputEl = document.getElementById('output');
+        try {
+            // 2. Inicializa o motor SQL.js. Ele precisa encontrar o arquivo ".wasm" associado.
+            // Esta configuração diz para ele buscar o .wasm no mesmo lugar de onde o .js veio (a CDN).
+            const SQL = await initSqlJs({
+                locateFile: file => `/_database/${file}` // local do arquivo .wasm
+            });
+
+            // 3. (OPCIONAL) Carrega um arquivo de banco de dados existente.
+            // Crie um arquivo "meu-banco.sqlite" na mesma pasta deste HTML.
+            // Para este fetch funcionar, use a extensão "Live Server" no VS Code.
+            const response = await fetch("/_database/banco.sqlite");
+            const fileBuffer = await response.arrayBuffer();
+            const db = new SQL.Database(new Uint8Array(fileBuffer));
+
+            // Se você não tiver um arquivo, pode criar um banco do zero em memória:
+            // const db = new SQL.Database();
+
+            // 4. Execute comandos SQL!
+            // Crie uma tabela se ela não existir
+            db.run("CREATE TABLE IF NOT EXISTS usuarios (id INTEGER PRIMARY KEY, nome TEXT, email TEXT);");
+
+            // Insere alguns dados (apenas se a tabela estiver vazia para não duplicar)
+            const count = db.exec("SELECT COUNT(*) FROM usuarios")[0].values[0][0];
+            if (count === 0) {
+                db.run("INSERT INTO usuarios (nome, email) VALUES (?,?), (?,?)", ["Usuário Exemplo", "exemplo@email.com", "Outro User", "outro@email.com"]);
+            }
+
+            // 5. Faça uma consulta (SELECT)
+            const result = db.exec("SELECT * FROM usuarios");
+
+            // 6. Mostre o resultado na tela
+            outputEl.textContent = JSON.stringify(result, null, 2);
+
+            // 7. Exporta o banco atualizado
+            const data = db.export();
+            const blob = new Blob([data], { type: "application/octet-stream" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "banco-atualizado.sqlite";
+            a.click();
+
+        } catch (err) {
+            outputEl.textContent = `Ocorreu um erro: ${err.message}\n\nVerifique se o arquivo 'meu-banco.sqlite' existe e se você está usando a extensão 'Live Server' no VS Code.`;
+            console.error(err);
+        }
+    }
+    run();
+  </script>
+  <!-- <script>
   window.onload = function () {
     window.location.href = "/pages/index.html";
   };
-</script>
+</script> -->
 </body>
 </html>
