@@ -9,17 +9,24 @@ function getPageName() {
  * url - caminho do arquivo html a ser carregado
  * selector - seletor do elemento onde o html será injetado */
 function injectHTML(url, selector) {
-  fetch(url)
-    .then(response => {
-      if (!response.ok) throw new Error(`Erro ao carregar ${url}: ${response.status}`);
-      return response.text();
-    })
-    .then(html => {
-      const target = document.querySelector(selector);
-      if (target) target.innerHTML = html;
-      else console.warn(`Elemento "${selector}" não encontrado.`);
-    })
-    .catch(err => console.error('Erro ao carregar o HTML:', err));
+  return fetch(url) // Retorne a Promise aqui
+      .then(response => {
+          if (!response.ok) throw new Error(`Erro ao carregar ${url}: ${response.status}`);
+          return response.text();
+      })
+      .then(html => {
+          const target = document.querySelector(selector);
+          if (target) {
+              target.innerHTML = html;
+          } else {
+              console.warn(`Elemento "${selector}" não encontrado.`);
+          }
+          return target; // Opcional: retorna o elemento injetado
+      })
+      .catch(err => {
+          console.error('Erro ao carregar o HTML:', err);
+          throw err; // Rejeite a promise para que o .catch possa ser usado no chain
+      });
 }
 
 /** Função utilitária. Recebe o link do arquivo .css e o carrega no head*/
@@ -70,11 +77,17 @@ function loadStyles(){
 
 /** Carrega dinamicamente o conteúdo e os estilos do header */
 function loadHeader(){
-    injectHTML('/templates/header/header.html', '#header');
-    addStyle('/templates/header/header.css');
-    addStyle('/templates/header/header_tablet.css');
-    addStyle('/templates/header/header_phone.css');
-    addScript('/templates/header/header.js');
+  injectHTML('/templates/header/header.html', '#header')
+      .then(() => {
+          // SOMENTE DEPOIS que o HTML do header estiver no DOM, adiciona os estilos e o script.
+          addStyle('/templates/header/header.css');
+          addStyle('/templates/header/header_tablet.css');
+          addStyle('/templates/header/header_phone.css');
+          addScript('/templates/header/header.js');
+      })
+      .catch(error => {
+          console.error("Falha ao carregar o header:", error);
+      });
 }
 
 /** Carrega dinamicamente o conteúdo e os estilos do footer */

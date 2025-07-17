@@ -48,4 +48,4 @@ if (window.innerWidth <= 900) {
 			}
 		});
 	}
-}
+} 
