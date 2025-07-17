@@ -44,6 +44,14 @@ main {
 		}
 	}
 
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+
 	/*----------------CARDS*/
 	.cards-container {
 		display: grid;
@@ -85,7 +93,9 @@ main {
 						padding: 5px;
 						border-radius: 14px;
 						text-transform: uppercase;
-						padding:  5px 10px;
+
+						padding: 5px 10px;
+
 					}
 
 					.artg {
