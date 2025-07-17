@@ -1,66 +1,71 @@
 @media (max-width: 600px) {
 	.section-forms {
-		gap: calc(5 * 1vw);
+		gap: 2vw;
 
 		form {
-			padding: calc(5 * 1vw) calc(6 * 1vw);
+			padding: 5vw 6vw;
+			border-radius: 2vw;
 			grid-template-columns: 1fr;
-			gap: calc(5 * 1vw);
-
-			:nth-child(1) {
-				grid-column: span 1;
-			}
+			gap: 4vw;
 
 			.input {
-				font-size: calc(16 * 0.25vw);
-				padding-bottom: calc(1 * 1vw);
+				font-size: 3.5vw;
+				padding-bottom: 1vw;
+				border-bottom-width: 0.5vw;
+			}
+
+			button {
+				width: 100%;
+				padding: 1vw 2vw;
+				font-size: 3vw;
+				border-radius: 1vw;
 			}
 		}
 	}
 
 	.section-result {
-		gap: calc(5 * 1vw);
+		gap: 2vw;
 
 		.article-result {
 			grid-template-columns: 1fr;
-			gap: calc(4 * 1vw);
+			gap: 10vw;
 
 			.result-item {
 				min-width: 100%;
-				padding: calc(6 * 1vw);
-				gap: calc(5 * 1vw);
+				padding: 6vw;
+				border-radius: 2vw;
+				gap: 5vw;
 
 				.item-title {
-					gap: calc(1 * 1vw);
+					gap: 1vw;
 
 					h3 {
-						font-size: calc(20 * 0.25vw);
+						font-size: 4vw;
 					}
 
 					span {
-						width: calc(30 * 1vw);
-						padding: calc(1 * 1vw) calc(2 * 1vw);
-						font-size: calc(12 * 0.25vw);
-						border-radius: calc(2 * 1vw);
+						padding: 1vw 2vw;
+						font-size: 2.5vw;
+						border-radius: 2vw;
 					}
 				}
 
 				.item-main {
-					gap: calc(4 * 1vw);
+					gap: 2vw;
 
 					.item-information {
-						font-size: calc(14 * 0.25vw);
+						font-size: 2.5vw;
 
 						:nth-child(1) {
-							font-size: calc(16 * 0.25vw);
+							font-size: 2.8vw;
 						}
 					}
 				}
 
 				.item-button {
-					padding: calc(2 * 1vw) calc(4 * 1vw);
-					font-size: calc(16 * 0.2vw);
-					border-radius: calc(3 * 1vw);
+					padding: 1vw 2vw;
+					font-size: 2.8vw;
+					border-radius: 1vw;
 				}
 			}
 		}

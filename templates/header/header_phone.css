@@ -1,30 +1,34 @@
 @media (max-width: 600px) {
-  
 	/* REGRAS ESTRUTURAIS ***************************************************/
-    header {
+	header {
 		background-color: #fbfbfb;
 		padding: 1vw;
 		box-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.3);
-		gap: 0;
+		gap: 20px;
 		position: fixed;
+
 		#container-logo {
 			gap: 1.5vw;
+
 			img {
 				width: 10vw;
 			}
+
 			span {
 				font-size: 6vw;
 			}
 		}
-		.menu-toggle{
+
+		.menu-toggle {
 			position: absolute;
 			top: 3vw;
 			left: 3vw;
 			display: block;
-			width: 5vw;
-			height: 5vw;
+			width: max-content;
+			height: max-content;
 			cursor: pointer;
 			z-index: 2;
+			padding: 1vw;
 
 			span {
 				display: block;
@@ -35,12 +39,66 @@
 				border-radius: 1.5vw;
 			}
 		}
-		
+
 		.nav-group {
-			display: none;
-		}
-		.nav-header {
-            margin-bottom: 0px;
+			display: flex;
+			overflow: hidden;
+
+			.nav-header {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: max-content;
+				grid-template-columns: 1fr !important;
+				margin-top: 0;
+				margin-bottom: 0px;
+				row-gap: 4vw;
+				max-height: 0;
+				transition: max-height 0.3s ease-in-out;
+
+				&.active {
+					max-height: 500px;
+					padding-bottom: 5vw;
+				}
+
+				li {
+					font-size: 4vw;
+					padding: 3vw 2vw;
+					height: max-content;
+
+					&:not(:last-of-type) {
+						width: 100%;
+						justify-content: center;
+					}
+
+					img {
+						width: 3.5vw;
+					}
+				}
+
+				#about,
+				#news {
+					gap: 3vw;
+					flex-direction: column;
+
+					#about-menu,
+					#news-menu {
+						gap: 2vw;
+						align-items: center;
+						width: 100%;
+						position: static;
+					}
+				}
+
+				#login {
+					padding: 0;
+
+					#login-a {
+						border-radius: 1vw;
+						padding: 3vw 5vw;
+					}
+				}
+			}
 		}
 	}
 }

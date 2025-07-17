@@ -1,0 +1,75 @@
+(ESFERA)
+-Federal
+    (PODER)
+    .Executivo - "Presidente"
+        (AGENDAS)
+        * administrativa
+            DOCUMENTOS:
+                -> LOA (tipo de dado: "valor")
+                -> PPA (tipo de dado: "valor")
+                -> LDO (tipo de dado: "menção")
+                -> Decretos (tipo de dado: "menção")
+                -> Portarias (tipo de dado: "menção")
+        * retórica
+            DOCUMENTOS:
+                -> plano de governo (tipo de dado: "menção")
+                -> mensagem (tipo de dado: "menção")
+                -> mensagem anual (tipo de dado: "menção")
+                -> mensagem de posse (tipo de dado: "menção")
+    .Legislativo - "Senadores e deputados federais"
+        (AGENDAS)
+        * Legislativa
+            DOCUMENTOS:
+                -> leis (tipo de dado: "menção")
+                -> projetos de leis (tipo de dado: "menção")
+                -> notas taquigraficas (tipo de dado: "menção")
+                
+-ESTADUAL
+    (PODER)
+    .Executivo - "Governador"
+        (AGENDAS)
+        * administrativa
+            DOCUMENTOS:
+                -> LOA (tipo de dado: "valor")
+                -> PPA (tipo de dado: "valor")
+                -> LDO (tipo de dado: "menção")
+                -> Decretos (tipo de dado: "menção")
+                -> Portarias (tipo de dado: "menção")
+        * retórica
+            DOCUMENTOS:
+                -> plano de governo (tipo de dado: "menção")
+                -> mensagem (tipo de dado: "menção")
+                -> mensagem anual (tipo de dado: "menção")
+                -> mensagem de posse (tipo de dado: "menção")
+    .Legislativo - "Deputados estaduais"
+        (AGENDAS)
+        * Legislativa
+            DOCUMENTOS:
+                -> leis (tipo de dado: "menção")
+                -> projetos de leis (tipo de dado: "menção")
+                -> notas taquigraficas (tipo de dado: "menção")
+-MUNICIPAL
+    (PODER)
+    .Executivo - "Prefeito"
+        (AGENDAS)
+        * administrativa
+            DOCUMENTOS:
+                -> LOA (tipo de dado: "valor")
+                -> PPA (tipo de dado: "valor")
+                -> LDO (tipo de dado: "menção")
+                -> Decretos (tipo de dado: "menção")
+                -> Portarias (tipo de dado: "menção")
+                -> lei orgânica (tipo de dado: "menção")
+        * retórica
+            DOCUMENTOS:
+                -> plano de governo (tipo de dado: "menção")
+                -> mensagem (tipo de dado: "menção")
+                -> mensagem anual (tipo de dado: "menção")
+                -> mensagem de posse (tipo de dado: "menção")
+    .Legislativo - "Vereadores"
+        (AGENDAS)   
+        * Legislativa
+            DOCUMENTOS:
+                -> leis (tipo de dado: "menção")
+                -> projetos de leis (tipo de dado: "menção")
+                -> notas taquigraficas (tipo de dado: "menção")

@@ -26,6 +26,7 @@
 						width: 3vw;
 						height: 3vw;
 					}
+
 				}
 			}
 		}
@@ -40,6 +41,7 @@
 					padding: 2vw;
 
 					.card-head {
+
 						.date {
 							font-size: 2vw;
 						}

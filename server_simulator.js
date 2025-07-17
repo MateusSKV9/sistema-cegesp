@@ -29,6 +29,14 @@ function addStyle(href) {
   }));
 }
 
+function addScript(src) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.type = 'text/javascript';
+    script.defer = true; // evita que a página trave antes do carregamento do script
+    document.head.appendChild(script);
+}
+
 /** Carrega os eslitos de forma dinâmica na página atual */
 function loadStyles(){
     // adiciona o CSS global
@@ -66,6 +74,7 @@ function loadHeader(){
     addStyle('/templates/header/header.css');
     addStyle('/templates/header/header_tablet.css');
     addStyle('/templates/header/header_phone.css');
+    addScript('/templates/header/header.js');
 }
 
 /** Carrega dinamicamente o conteúdo e os estilos do footer */
@@ -74,6 +83,7 @@ function loadFooter(){
     addStyle('/templates/footer/footer.css');
     addStyle('/templates/footer/footer_tablet.css');
     addStyle('/templates/footer/footer_phone.css');
+
 }
 
 loadStyles(); // carrega os estilos da página
