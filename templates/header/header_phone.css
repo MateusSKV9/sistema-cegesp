@@ -4,7 +4,7 @@
 		background-color: #fbfbfb;
 		padding: 1vw;
 		box-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.3);
-		gap: 20px;
+		gap: 4vw;
 		position: fixed;
 
 		#container-logo {
@@ -19,7 +19,8 @@
 			}
 		}
 
-		.menu-toggle {
+		#menu-toggle {
+			cursor: pointer;
 			position: absolute;
 			top: 3vw;
 			left: 3vw;
@@ -40,65 +41,80 @@
 			}
 		}
 
-		.nav-group {
-			display: flex;
-			overflow: hidden;
-
-			.nav-header {
+		#nav-group{
+			max-height: 0; /* altura inicial colapsada */
+  			overflow: hidden; /* esconde conteúdo que ultrapassa max-height */
+			transition: max-height 0.3s ease-out; /* animação suave */
+			
+			#nav-header {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				height: max-content;
 				grid-template-columns: 1fr !important;
 				margin-top: 0;
-				margin-bottom: 0px;
+				margin-bottom: 5vw;
 				row-gap: 4vw;
-				max-height: 0;
-				transition: max-height 0.3s ease-in-out;
 
-				&.active {
+				/* &.active {
 					max-height: 500px;
 					padding-bottom: 5vw;
-				}
-
+				} */
+				
 				li {
 					font-size: 4vw;
 					padding: 3vw 2vw;
 					height: max-content;
-
-					&:not(:last-of-type) {
-						width: 100%;
-						justify-content: center;
+					width: 100%;
+					justify-content: center;
+					border: 0.5vw solid #000000;
+					
+					ul{
+						li{
+							border: 0.5vw solid #adadad;
+							color: black;
+							background-color: #eaeaea;
+						}
+						li:hover{
+							background-color: #eaeaea;
+						}
 					}
-
+					
 					img {
 						width: 3.5vw;
 					}
 				}
-
-				#about,
-				#news {
-					gap: 3vw;
-					flex-direction: column;
-
-					#about-menu,
-					#news-menu {
+				
+				.has-submenu{
+					gap: 5vw;
+					.submenu.show {
 						gap: 2vw;
 						align-items: center;
 						width: 100%;
 						position: static;
+						background-color: white;
+						box-shadow: none;
 					}
-				}
+		    	}
 
 				#login {
 					padding: 0;
-
+					border: none;
 					#login-a {
 						border-radius: 1vw;
 						padding: 3vw 5vw;
 					}
 				}
+				.hover-btn:hover {
+					background-color: #fbfbfb;
+					color: var(--color-text-hover);
+				}
 			}
+		}
+
+		#nav-group.show {
+			/* display: block; */
+			max-height: 100vh;
 		}
 	}
 }

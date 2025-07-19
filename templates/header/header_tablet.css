@@ -5,11 +5,11 @@
         flex-direction: column;
         gap: 20px;
         position: sticky;
-        .nav-header {
-            margin-bottom: 50px;
-            margin-top: -20px;
-            grid-template-columns: repeat(5,auto);
-            row-gap: 10px;
+        
+        #nav-header {
+            margin-bottom: 40px;
+            margin-top: -15px;
+            /* row-gap: 10px; */
             li{
                 border: 1px solid #eaeaea;
                 height: 40px;
@@ -19,14 +19,12 @@
                 grid-column: 1/6;
                 border: none;           
             }
-            #about,#news {
-                #about-menu, #news-menu { /* estilos dos ubmenus */
-                    li{
-                        border: none;
-                        padding: 0;
-                    }
+            .has-submenu{
+                .submenu.show {
+                    /* mostra quando ativado */
+                    top: 65%;
                 }
-            }
+		    }
         }
     }
 }

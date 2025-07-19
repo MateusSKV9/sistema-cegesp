@@ -1,36 +1,25 @@
-const link_about = document.querySelector("#about > a");
-const about_menu = document.querySelector("#about-menu");
-const news_menu = document.querySelector("#news-menu");
-const link_news = document.querySelector("#news > a");
+/** DEFINE O EVENTO DO CLICK NO BTN DE HAMBURGER */
+const menu_toggle = document.querySelector('#menu-toggle'); // obtém a ref do btn de hamburger
+menu_toggle.addEventListener('click',function(e){ // adiciona o evento de click
+    const navGroup = document.getElementById('nav-group'); // obtém ref do menu
+    navGroup.classList.toggle('show'); // aplica e desaplica a classe show (responsável por aparecer e desaparecer com o menu)
+});
 
-if (window.innerWidth <= 900) {
-	link_about.addEventListener("click", () => {
-		about_menu.classList.toggle("show");
-		news_menu.classList.remove("show");
-	});
-
-	link_news.addEventListener("click", () => {
-		news_menu.classList.toggle("show");
-		about_menu.classList.remove("show");
-	});
-
-	const menu_toggle = document.querySelector(".menu-toggle");
-	const nav_header = document.querySelector(".nav-header");
-	const nav_group = document.querySelector(".nav-group");
-
-	menu_toggle.addEventListener("click", () => {
-		nav_header.classList.toggle("active");
-	});
-
-	document.addEventListener("click", function (event) {
-		if (window.innerWidth <= 600) {
-			if (
-				!event.target.closest(".menu-toggle") &&
-				!nav_group.contains(event.target) &&
-				nav_header.classList.contains("active")
-			) {
-				nav_header.classList.remove("active");
-			}
-		}
-	});
-}
+/** DEFINE O EVENTO DO CLICK NOS BTNs DOS SUBMENUS */
+const menuItems = document.querySelectorAll('.has-submenu > a'); // obtém a ref de todos os links clicáveis dos btns com submenu
+menuItems.forEach(function(menuItem) { // percorre os liks clicáveis de cada btn com submenu
+    menuItem.addEventListener('click', function(e) { // adiciona um evento de click a cada um deles
+        e.preventDefault(); // evita a resposta padrão de click no link <a>
+        const submenu = this.nextElementSibling; // obtem a lista <ul> do submenu
+        if (submenu) {submenu.classList.toggle('show');} // mostra o submenu
+        console.log("click!");
+    });
+    // Evento de mouseout no submenu (fecha ao sair)
+    const submenu = menuItem.nextElementSibling;
+    if (submenu) {
+        submenu.addEventListener('mouseleave', function() {
+        submenu.classList.remove('show');
+        console.log("submenu fechado por mouseout");
+        });
+    }
+});
