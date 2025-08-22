@@ -1,11 +1,61 @@
-main {
-    padding: 20px 50px;
+:root {
+	/* --high-blue: #2d6fff; */
+	--input-sombra: #2d6fff33;
+	--anima: all 0.3s ease;
 }
 
-.hidden {
-    display: none;
+/* -------- FORM PRINCIPAL CONTAINER -------- */
+main form {
+	max-width: 700px;
+	width: 100%;
+	background-color: rgb(234, 75, 75);
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 30px 40px;
+	position: relative;
+	overflow: hidden;
 }
 
+main h2 {
+	color: var(--high-blue);
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* ===== FORM GROUP ===== */
 .form-group {
-    margin: 15px 0;
+	margin-bottom: 25px;
+	background-color: rgb(125, 0, 0);
+
+	/*--------LABELS*/
+	.form-group label,
+	.form-group h3 {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: 500;
+		color: var(--text-label);
+		font-size: 15px;
+		background-color: pink;
+	}
+}
+
+/*-------- COMBOBOX PADRAO*/
+select {
+	width: 100%;
+	padding: 12px 16px;
+	border-radius: 6px;
+	border: 1px solid grey;
+	background-color: rgb(0, 255, 170);
+	font-size: 16px;
+	color: var(--text-color);
+	cursor: pointer;
+	transition: var(--anima);
+
+	select:focus {
+		outline: none;
+		border-color: var(--high-blue);
+		box-shadow: 0 0 0 3px var(--input-sombra);
+	}
 }
