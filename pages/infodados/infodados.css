@@ -136,3 +136,22 @@ select {
 	color: #fff;
 	border-color: var(--high-blue);
 }
+
+/* ----------- BOTÃO ----------- */
+.btn {
+	width: 100%;
+	padding: 14px;
+	background-color: var(--high-blue);
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: var(--anima);
+	margin-top: 20px;
+}
+
+.btn:hover {
+	background-color: rgb(85, 139, 255);
+}
