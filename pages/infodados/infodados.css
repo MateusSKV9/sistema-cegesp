@@ -12,7 +12,7 @@
 main form {
 	max-width: 700px;
 	width: 100%;
-	background-color: rgb(234, 75, 75);
+	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	padding: 30px 40px;
@@ -31,7 +31,7 @@ main h2 {
 /* ===== FORM GROUP ===== */
 .form-group {
 	margin-bottom: 25px;
-	background-color: rgb(125, 0, 0);
+	background-color: #fff;
 
 	/*--------LABELS*/
 	.form-group label,
@@ -41,7 +41,7 @@ main h2 {
 		font-weight: 500;
 		color: var(--text-label);
 		font-size: 15px;
-		background-color: pink;
+		background-color: #fff;
 	}
 }
 
@@ -51,7 +51,7 @@ select {
 	padding: 12px 16px;
 	border-radius: 6px;
 	border: 1px solid grey;
-	background-color: rgb(0, 255, 170);
+	background-color: #fff;
 	font-size: 16px;
 	color: var(--text-color);
 	cursor: pointer;
@@ -71,7 +71,7 @@ select {
 	flex-wrap: wrap;
 	gap: 12px;
 	margin-top: 8px;
-	background-color: blue;
+	background-color: #fff;
 }
 
 .radio-option label,
@@ -82,7 +82,7 @@ select {
 	border: 1px solid grey;
 	border-radius: 6px;
 	cursor: pointer;
-	background-color: rgb(7, 201, 0);
+	background-color: #fff;
 	font-size: 14px;
 	transition: var(--anima);
 }
@@ -91,4 +91,16 @@ select {
 .radio-option input[type="radio"],
 #poderOptions input[type="radio"] {
 	display: none;
+}
+
+.radio-option input[type="radio"]:checked + label,
+#poderOptions input[type="radio"]:checked + label {
+	background-color: var(--high-blue);
+	color: #fff;
+	border-color: var(--high-blue);
+}
+
+.radio-option label:hover,
+#poderOptions label:hover {
+	border-color: var(--high-blue);
 }
