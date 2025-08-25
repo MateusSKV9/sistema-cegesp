@@ -39,9 +39,9 @@ main h2 {
 	.form-group h3 {
 		display: block;
 		margin-bottom: 8px;
+		font-size: 22px;
 		font-weight: 500;
 		color: var(--text-label);
-		font-size: 15px;
 		background-color: #fff;
 	}
 }
