@@ -18,6 +18,7 @@ main form {
 	padding: 30px 40px;
 	position: relative;
 	overflow: hidden;
+	font-family: var(--font-roboto);
 }
 
 main h2 {
@@ -28,7 +29,7 @@ main h2 {
 	margin-bottom: 30px;
 }
 
-/* ===== FORM GROUP ===== */
+/*===== FORMULARIO ===== */
 .form-group {
 	margin-bottom: 25px;
 	background-color: #fff;
@@ -137,7 +138,39 @@ select {
 	border-color: var(--high-blue);
 }
 
-/* ----------- BOTÃO ----------- */
+/*-----------------PERIODOS--------------*/
+.date-range {
+	display: flex;
+	gap: 15px;
+	margin-top: 8px;
+
+	div {
+		flex: 1;
+	}
+
+	input[type="date"] {
+		width: 100%;
+		padding: 12px 16px;
+		border: 1px solid grey;
+		border-radius: 6px;
+		font-size: 15px;
+		transition: var(--anima);
+		cursor: pointer;
+	}
+
+	input[type="date"]:focus {
+		outline: none;
+		border-color: var(--high-blue);
+		box-shadow: 0 0 0 3px var(--input-sombra);
+		color: var(--high-blue);
+	}
+
+	input[type="date"]::-webkit-calendar-picker-indicator {
+		filter: invert(34%) sepia(98%) saturate(7496%) hue-rotate(210deg) brightness(99%) contrast(101%);
+	}
+}
+
+/* ----------- BOTÃO --------*/
 .btn {
 	width: 100%;
 	padding: 14px;
