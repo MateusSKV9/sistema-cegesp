@@ -36,7 +36,8 @@ main h2 {
 
 	/*--------LABELS*/
 	.form-group label,
-	.form-group h3 {
+	.form-group h3,
+	.form-group label[for="documento"] {
 		display: block;
 		margin-bottom: 8px;
 		font-size: 22px;
@@ -167,6 +168,10 @@ select {
 
 	input[type="date"]::-webkit-calendar-picker-indicator {
 		filter: invert(34%) sepia(98%) saturate(7496%) hue-rotate(210deg) brightness(99%) contrast(101%);
+	}
+
+	h3 {
+		margin-top: 20px;
 	}
 }
 

@@ -1,89 +1,103 @@
 @media (max-width: 900px) {
 	/*TRABALAHR COM RESPONSIVIDADE. MANTER SOMENTE OS COMANDOS NECESSARIOS QUE CONTEM TAMANHO*/
 	/* -------- FORM PRINCIPAL CONTAINER -------- */
-    main form {
-        max-width: 91.15vw;
-        width: 100%;
-        border-radius: 1.04vw;
-        box-shadow: 0 0.52vw 1.3vw rgba(0, 0, 0, 0.1);
-        padding: 3.91vw 5.21vw;
-    }
+	main form {
+		max-width: 91.15vw;
+		width: 100%;
+		border-radius: 1.04vw;
+		box-shadow: 0 0.52vw 1.3vw rgba(0, 0, 0, 0.1);
+		padding: 3.91vw 5.21vw;
+	}
 
-    main h2 {
-        font-size: 3.13vw;
-        font-weight: 500;
-        margin-bottom: 3.91vw;
-    }
+	main h2 {
+		font-size: 3.13vw;
+		font-weight: 500;
+		margin-bottom: 3.91vw;
+	}
 
-    /*===== FORMULARIO ===== */
-    .form-group {
-        margin-bottom: 3.26vw;
+	/*===== FORMULARIO ===== */
+	.form-group {
+		margin-bottom: 3.26vw;
 
-        /*--------LABELS*/
-        .form-group label,
-        .form-group h3 {
-            margin-bottom: 1.04vw;
-            font-weight: 500;
-            font-size: 1.95vw;
-        }
-    }
+		/*--------LABELS*/
+		.form-group label,
+		.form-group h3 {
+			margin-bottom: 1.04vw;
+			font-weight: 500;
+			font-size: 1.95vw;
+		}
+		label[for="documento"] {
+			margin-bottom: 1.04vw;
+			font-weight: 500;
+			font-size: 3.95vw;
+		}
+	}
 
-    /*-------- COMBOBOX PADRAO*/
-    select {
-        width: 100%;
-        padding: 1.56vw 2.08vw;
-        border-radius: 0.78vw;
-        font-size: 2.08vw;
-    }
+	/*-------- COMBOBOX PADRAO*/
+	select {
+		width: 100%;
+		padding: 1.56vw 2.08vw;
+		border-radius: 0.78vw;
+		font-size: 3.08vw;
+	}
 
-    /* -------- BOTOES AGENDAS (PODERES) ---------*/
-    #poderOptions {
-        flex-direction: column;
-        gap: 1.56vw;
-        margin-top: 1.04vw;
-    }
+	/* -------- BOTOES AGENDAS (PODERES) ---------*/
+	#poderOptions {
+		flex-direction: column;
+		gap: 1.56vw;
+		margin-top: 1.04vw;
+	}
 
-    #poderOptions label {
-        padding: 1.56vw 2.08vw;
-        border-radius: 0.78vw;
-        font-size: 1.82vw;
-    }
+	#poderOptions label {
+		padding: 1.56vw 2.08vw;
+		border-radius: 0.78vw;
+		font-size: 2.82vw;
+	}
 
+	/* ----------- AGRUPAMENTOS --------*/
+	#agrupamentoGroup {
+		margin-bottom: 3.26vw;
+	}
 
-    /* ----------- AGRUPAMENTOS --------*/
-    #agrupamentoGroup {
-        margin-bottom: 3.26vw;
-    }
+	#agrupamentoGroup label {
+		padding: 1.56vw 2.08vw;
+		border-radius: 0.78vw;
+		font-size: 2.82vw;
+	}
 
-    #agrupamentoGroup label {
-        padding: 1.56vw 2.08vw;
-        border-radius: 0.78vw;
-        font-size: 1.82vw;
-    }
+	/*-----------------PERIODOS--------------*/
+	.date-range {
+		gap: 1.95vw;
+		margin-top: 1.04vw;
 
-    /*-----------------PERIODOS--------------*/
-    .date-range {
-        gap: 1.95vw;
-        margin-top: 1.04vw;
+		div {
+			flex: 1;
+		}
 
-        div {
-            flex: 1;
-        }
+		input[type="date"] {
+			width: 100%;
+			padding: 1.56vw 2.08vw;
+			border-radius: 0.78vw;
+			font-size: 2.95vw;
+		}
 
-        input[type="date"] {
-            width: 100%;
-            padding: 1.56vw 2.08vw;
-            border-radius: 0.78vw;
-            font-size: 1.95vw;
-        }
-    }
+		h3 {
+			margin-top: 2.22vw;
+		}
 
-    /* ----------- BOTÃO --------*/
-    .btn {
-        width: 100%;
-        padding: 1.82vw;
-        font-weight: 500;
-        font-size: 2.08vw;
-        border-radius: 0.78vw;
-        margin-top: 2.6vw;
-    }
+		label[for="start-date"],
+		label[for="end-date"] {
+			font-size: 3.95vw;
+		}
+	}
+
+	/* ----------- BOTÃO --------*/
+	.btn {
+		width: 100%;
+		padding: 1.82vw;
+		font-weight: 500;
+		font-size: 3.08vw;
+		border-radius: 0.78vw;
+		margin-top: 2.6vw;
+	}
+}
