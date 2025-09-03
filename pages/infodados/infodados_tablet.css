@@ -10,9 +10,9 @@
 	}
 
 	main h2 {
-		font-size: 3.13vw;
+		font-size: 4.13vw;
 		font-weight: 500;
-		margin-bottom: 3.91vw;
+		margin-bottom: 4.91vw;
 	}
 
 	/*===== FORMULARIO ===== */
@@ -29,7 +29,7 @@
 		label[for="documento"] {
 			margin-bottom: 1.04vw;
 			font-weight: 500;
-			font-size: 3.95vw;
+			font-size: 1.95vw;
 		}
 	}
 
@@ -38,7 +38,7 @@
 		width: 100%;
 		padding: 1.56vw 2.08vw;
 		border-radius: 0.78vw;
-		font-size: 3.08vw;
+		font-size: 2.7vw;
 	}
 
 	/* -------- BOTOES AGENDAS (PODERES) ---------*/
@@ -87,7 +87,7 @@
 
 		label[for="start-date"],
 		label[for="end-date"] {
-			font-size: 3.95vw;
+			font-size: 1.95vw;
 		}
 	}
 
