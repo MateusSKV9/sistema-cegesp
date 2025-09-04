@@ -1,11 +1,195 @@
-main {
-    padding: 20px 50px;
+:root {
+	/* --high-blue: #2d6fff; */
+	--input-sombra: #2d6fff33;
+	--anima: all 0.3s ease;
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
 
+/* -------- FORM PRINCIPAL CONTAINER -------- */
+main form {
+	max-width: 700px;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 30px 40px;
+	position: relative;
+	overflow: hidden;
+	font-family: var(--font-roboto);
+}
+
+main h2 {
+	color: var(--high-blue);
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/*===== FORMULARIO ===== */
 .form-group {
-    margin: 15px 0;
+	margin-bottom: 25px;
+	background-color: #fff;
+
+	/*--------LABELS*/
+	.form-group label,
+	.form-group h3,
+	.form-group label[for="documento"] {
+		display: block;
+		margin-bottom: 8px;
+		font-size: 22px;
+		font-weight: 500;
+		color: var(--text-label);
+		background-color: #fff;
+	}
+}
+
+/*-------- COMBOBOX PADRAO*/
+select {
+	width: 100%;
+	padding: 12px 16px;
+	border-radius: 6px;
+	border: 1px solid grey;
+	background-color: #fff;
+	font-size: 16px;
+	color: var(--text-color);
+	cursor: pointer;
+	transition: var(--anima);
+
+	select:focus {
+		outline: none;
+		border-color: var(--high-blue);
+		box-shadow: 0 0 0 3px var(--input-sombra);
+	}
+}
+
+/* -------- BOTOES AGENDAS (PODERES) ---------*/
+#poderOptions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 8px;
+	background-color: #fff;
+}
+
+#poderOptions label {
+	display: block;
+	padding: 12px 16px;
+	text-align: center;
+	border: 1px solid grey;
+	border-radius: 6px;
+	cursor: pointer;
+	background-color: #fff;
+	font-size: 14px;
+	transition: var(--anima);
+}
+
+/*checar e manter item(label) marcado*/
+#poderOptions input[type="radio"]:checked + label {
+	background-color: var(--high-blue);
+	border-color: var(--high-blue);
+	color: #fff;
+}
+
+#poderOptions label:hover {
+	border-color: var(--high-blue);
+}
+
+/*sumir cm os botoes */
+#poderOptions input[type="radio"] {
+	display: none;
+}
+/*esticar e encolher poderes*/
+#poderOptions div {
+	flex: 1 1 30%; /*grow, shrink e tamanho_base*/
+}
+
+/* ----------- AGRUPAMENTOS --------*/
+#agrupamentoGroup {
+	margin-bottom: 25px;
+
+	/*sumir os botoes*/
+	input[type="radio"] {
+		display: none;
+	}
+}
+
+#agrupamentoGroup label {
+	display: block;
+	padding: 12px 16px;
+	border: 1px solid grey;
+	border-radius: 6px;
+	text-align: center;
+	cursor: pointer;
+	background-color: white;
+	font-size: 14px;
+	transition: var(--anima);
+}
+
+#agrupamentoGroup label:hover {
+	border-color: var(--high-blue);
+}
+
+#agrupamentoGroup input[type="radio"]:checked + label {
+	background-color: var(--high-blue);
+	color: #fff;
+	border-color: var(--high-blue);
+}
+
+/*-----------------PERIODOS--------------*/
+.date-range {
+	display: flex;
+	gap: 15px;
+	margin-top: 8px;
+
+	div {
+		flex: 1;
+	}
+
+	input[type="date"] {
+		width: 100%;
+		padding: 12px 16px;
+		border: 1px solid grey;
+		border-radius: 6px;
+		font-size: 15px;
+		transition: var(--anima);
+		cursor: pointer;
+	}
+
+	input[type="date"]:focus {
+		outline: none;
+		border-color: var(--high-blue);
+		box-shadow: 0 0 0 3px var(--input-sombra);
+		color: var(--high-blue);
+	}
+
+	input[type="date"]::-webkit-calendar-picker-indicator {
+		filter: invert(34%) sepia(98%) saturate(7496%) hue-rotate(210deg) brightness(99%) contrast(101%);
+	}
+
+	h3 {
+		margin-top: 20px;
+	}
+}
+
+/* ----------- BOTÃO --------*/
+.btn {
+	width: 100%;
+	padding: 14px;
+	background-color: var(--high-blue);
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: var(--anima);
+	margin-top: 20px;
+}
+
+.btn:hover {
+	background-color: rgb(85, 139, 255);
 }
