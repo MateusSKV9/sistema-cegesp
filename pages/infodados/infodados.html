@@ -10,7 +10,9 @@
 			}
 		</style>
 		<script src="/server_simulator.js"></script>
+		<!--<script src="/function_select.js"></script>-->
 		<script defer src="infodados.js"></script>
+		<script defer src="sendData.js"></script>
 	</head>
 	<body>
 		<header id="header">CARREGADO DINAMICAMENTE! NÃO MEXA!</header>
@@ -21,10 +23,10 @@
 			<form id="infodadosForm" action="" method="post">
 				<div class="form-group">
 					<h3>Esfera:</h3>
-					<select name="esfera" id="esfera">
-						<option value="federal">Federal</option>
-						<option value="estadual">Estadual</option>
-						<option value="municipal">Municipal</option>
+					<select name="esfera" id="esfera" required>
+						<option value="f">Federal</option>
+						<option value="e">Estadual</option>
+						<option value="m">Municipal</option>
 					</select>
 				</div>
 
@@ -103,16 +105,32 @@
 					<h3>Período</h3>
 					<div>
 						<label for="start-date">Início:</label>
-						<input type="date" id="start-date" name="start-date" />
+						<input
+							type="number"
+							id="start-year"
+							name="start-year"
+							min="1900"
+							max="2100"
+							placeholder="Ex: 2000"
+						/>
 					</div>
 					<div>
 						<label for="end-date">Fim:</label>
-						<input type="date" id="end-date" name="end-date" />
+						<input
+							type="number"
+							id="end-year"
+							name="end-year"
+							min="1900"
+							max="2100"
+							placeholder="Ex: 2025"
+						/>
 					</div>
 				</div>
 
 				<button type="submit" class="btn">Buscar</button>
 			</form>
+
+			<div id="tabela-container"></div>
 		</main>
 
 		<footer id="footer">CARREGADO DINAMICAMENTE! NÃO MEXA!</footer>

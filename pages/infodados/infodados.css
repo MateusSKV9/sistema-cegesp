@@ -148,7 +148,27 @@ select {
 	div {
 		flex: 1;
 	}
+	input[type="number"] {
+		width: 100%;
+		padding: 12px 16px;
+		border: 1px solid grey;
+		border-radius: 6px;
+		font-size: 15px;
+		transition: var(--anima);
+		cursor: pointer;
+	}
 
+	input[type="number"]:focus {
+		outline: none;
+		border-color: var(--high-blue);
+		box-shadow: 0 0 0 3px var(--input-sombra);
+		color: var(--high-blue);
+	}
+
+	input[type="date"]::-webkit-calendar-picker-indicator {
+		filter: invert(34%) sepia(98%) saturate(7496%) hue-rotate(210deg) brightness(99%) contrast(101%);
+	}
+	/*
 	input[type="date"] {
 		width: 100%;
 		padding: 12px 16px;
@@ -169,6 +189,7 @@ select {
 	input[type="date"]::-webkit-calendar-picker-indicator {
 		filter: invert(34%) sepia(98%) saturate(7496%) hue-rotate(210deg) brightness(99%) contrast(101%);
 	}
+		*/
 
 	h3 {
 		margin-top: 20px;
@@ -192,4 +213,13 @@ select {
 
 .btn:hover {
 	background-color: rgb(85, 139, 255);
+}
+
+#tabela-container {
+	max-width: 1000px;
+	max-height: 600px;
+	overflow: auto;
+	margin: 20px auto;
+	border: 1px solid #ababab;
+	font-family: "Poppins", sans-serif;
 }
