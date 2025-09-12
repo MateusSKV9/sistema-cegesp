@@ -102,4 +102,23 @@
 		border-radius: 0.78vw;
 		margin-top: 2.6vw;
 	}
+
+	#tabela-container {
+		width: 97.92vw;
+		max-height: 100vw;
+		margin: 2.17vw auto;
+
+		.tabela-dados {
+			width: 100%;
+
+			/*HEAD*/
+			th {
+				padding: 0.87vw;
+			}
+			/*BODY*/
+			td {
+				padding: 0.87vw;
+			}
+		}
+	}
 }
