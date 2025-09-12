@@ -5,7 +5,7 @@ document.getElementById("infodadosForm").addEventListener("submit", function (e)
 	const startYear = document.getElementById("start-year").value || null;
 	const endYear = document.getElementById("end-year").value || null;
 
-	//  function_select(esfera, startYear, endYear)
+	selecionarDocumentos(esfera, startYear, endYear);
 
 	const dadosMock = [
 		{ id: 3, dado: "13245.67", ano: 2000, TipoDocumento: "PPA", PalavraChave: "vacina" },
@@ -51,17 +51,16 @@ document.getElementById("infodadosForm").addEventListener("submit", function (e)
 		{ id: 43, dado: "15321.00", ano: 2040, TipoDocumento: "PPA", PalavraChave: "vacina" },
 	];
 
-	/*
-		try {
-		const dadosPesquisa = function_select(esfera, startYear, endYear);
+	try {
+		const dadosPesquisa = selecionarDocumentos(esfera, startYear, endYear);
 
 		criarTabela(dados);
 	} catch (error) {
 		console.error("Erro ao buscar dados:", error);
 		alert("Erro ao carregar dados.");
 	}
-*/
-	criarTabela(dadosMock);
+
+	//criarTabela(dadosMock);
 });
 
 ////////////////////////////////////////////////////////////
