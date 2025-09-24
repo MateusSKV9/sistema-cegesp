@@ -5,6 +5,14 @@ document.getElementById("infodadosForm").addEventListener("submit", function (e)
 	const startYear = document.getElementById("start-year").value || null;
 	const endYear = document.getElementById("end-year").value || null;
 
+	const keyword = document.getElementById("keywordInput").value || null;
+	//const poder = document.querySelector('input[name="poder"]:checked')?.value || null;
+	//const documento = document.getElementById("documento").value;
+
+	//mostrarFiltros({ palavraChave, esfera, poder, documento, startYear, endYear });
+
+	mostrarFiltros({ keyword, esfera, startYear, endYear });
+
 	DatabaseService.selecionarDocumentos(esfera, startYear, endYear)
 		.then((jsonString) => {
 			const dados = JSON.parse(jsonString); //transformar json em array de objetos
@@ -62,4 +70,38 @@ function mostrarFiltros(esfera, startYear, endYear) {
 	filtrosDiv.innerHTML = `<strong>Filtros Selecionados:</strong> Esfera: ${esfera}, Ano Início: ${
 		startYear || "N/A"
 	}, Ano Fim: ${endYear || "N/A"}`;
+}
+
+/////////////////////////////
+
+function mostrarFiltros({ keyword, esfera, startYear, endYear }) {
+	const filtrosDiv = document.getElementById("filtrosSelecionados");
+
+	// Casos de Períodos
+	let periodoTexto;
+	if (startYear && endYear) {
+		periodoTexto = `${startYear} - ${endYear}`;
+	} else if (startYear && !endYear) {
+		periodoTexto = `${startYear} em diante`;
+	} else if (!startYear && endYear) {
+		periodoTexto = `até ${endYear}`;
+	} else {
+		periodoTexto = "todos";
+	}
+
+	let esferaTexto;
+	if (esfera === "f") {
+		esferaTexto = "Federal";
+	} else if (esfera === "e") {
+		esferaTexto = "Estadual";
+	} else if (esfera === "m") {
+		esferaTexto = "Municipal";
+	}
+
+	filtrosDiv.innerHTML = `
+		<h3>Filtros Selecionados:</h3>
+		<p>Palavra-Chave: ${keyword}</p>
+		<p>Esfera: ${esferaTexto}</p>
+		<p>Período: ${periodoTexto} </p>
+	`;
 }
