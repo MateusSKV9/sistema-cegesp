@@ -22,6 +22,12 @@
 			<h2>ACESSO AOS DOCUMENTOS OFICIAIS</h2>
 
 			<form id="infodadosForm" action="" method="post">
+				<!--Campo para Palavra-Chave-->
+				<div id="keyword" class="form-group">
+					<h3>Palavra-Chave:</h3>
+					<input type="text" id="keywordInput" name="keywordInput" value="Vacina" disabled />
+				</div>
+
 				<div class="form-group">
 					<h3>Esfera:</h3>
 					<select name="esfera" id="esfera" required>
@@ -73,7 +79,7 @@
 					<h3>Agenda</h3>
 					<div id="poderOptions">
 						<div>
-							<input type="radio" name="poder" id="executivo" value="executivo" />
+							<input type="radio" name="poder" id="executivo" value="executivo" required />
 							<label for="executivo">Poder Executivo</label>
 						</div>
 						<div>
@@ -130,6 +136,10 @@
 
 				<button type="submit" class="btn">Buscar</button>
 			</form>
+
+			<br />
+			<hr />
+			<br />
 
 			<div id="tabela-container"></div>
 		</main>

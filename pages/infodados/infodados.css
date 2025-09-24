@@ -47,6 +47,22 @@ main h2 {
 	}
 }
 
+#keyword input {
+	width: 100%;
+	padding: 12px 16px;
+	border-radius: 6px;
+	border: 1px solid grey;
+	background-color: #fff;
+	font-size: 16px;
+	cursor: not-allowed;
+	transition: var(--anima);
+
+	&:disabled {
+		color: grey;
+		background-color: #f0f0f0;
+	}
+}
+
 /*-------- COMBOBOX PADRAO*/
 select {
 	width: 100%;
@@ -214,6 +230,40 @@ select {
 .btn:hover {
 	background-color: rgb(85, 139, 255);
 }
+/*
+#tabela-container {
+	width: 900px;
+	max-height: 600px;
+	overflow: auto;
+	margin: 20px auto;
+	border: 1px solid #ababab;
+	font-family: "Poppins", sans-serif;
+
+	.tabela-dados {
+		width: 100%;
+		border-collapse: collapse;
+
+		/*HEAD
+		th {
+			position: sticky;
+			top: 0;
+			border: 2px solid #888888;
+			padding: 8px;
+			background-color: #d3d3d3;
+			text-align: left;
+		}
+		/*BODY
+		td {
+			border: 1px solid #888888;
+			padding: 8px;
+		}
+
+		tr:hover {
+			background-color: #bddeff;
+		}
+	}
+}
+*/
 
 #tabela-container {
 	width: 900px;
@@ -227,7 +277,6 @@ select {
 		width: 100%;
 		border-collapse: collapse;
 
-		/*HEAD*/
 		th {
 			position: sticky;
 			top: 0;
@@ -236,7 +285,7 @@ select {
 			background-color: #d3d3d3;
 			text-align: left;
 		}
-		/*BODY*/
+
 		td {
 			border: 1px solid #888888;
 			padding: 8px;
