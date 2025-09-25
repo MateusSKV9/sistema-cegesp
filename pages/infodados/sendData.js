@@ -7,13 +7,13 @@ document.getElementById("infodadosForm").addEventListener("submit", function (e)
 
 	const keyword = document.getElementById("keywordInput").value || null;
 	//const poder = document.querySelector('input[name="poder"]:checked')?.value || null;
-	//const documento = document.getElementById("documento").value;
+	const TipoDoc = document.getElementById("documento").value;
 
 	//mostrarFiltros({ palavraChave, esfera, poder, documento, startYear, endYear });
 
-	mostrarFiltros({ keyword, esfera, startYear, endYear });
+	mostrarFiltros({ keyword, esfera, startYear, endYear, TipoDoc });
 
-	DatabaseService.selecionarDocumentos(esfera, startYear, endYear)
+	DatabaseService.selecionarDocumentos(esfera, startYear, endYear, TipoDoc)
 		.then((jsonString) => {
 			const dados = JSON.parse(jsonString); //transformar json em array de objetos
 			dados.sort((a, b) => b.ano - a.ano);
@@ -65,16 +65,9 @@ function criarTabela(dados) {
 	container.appendChild(table);
 }
 
-function mostrarFiltros(esfera, startYear, endYear) {
-	const filtrosDiv = document.getElementById("filtrosSelecionados");
-	filtrosDiv.innerHTML = `<strong>Filtros Selecionados:</strong> Esfera: ${esfera}, Ano Início: ${
-		startYear || "N/A"
-	}, Ano Fim: ${endYear || "N/A"}`;
-}
-
 /////////////////////////////
 
-function mostrarFiltros({ keyword, esfera, startYear, endYear }) {
+function mostrarFiltros({ keyword, esfera, startYear, endYear, TipoDoc }) {
 	const filtrosDiv = document.getElementById("filtrosSelecionados");
 
 	// Casos de Períodos
@@ -97,11 +90,30 @@ function mostrarFiltros({ keyword, esfera, startYear, endYear }) {
 	} else if (esfera === "m") {
 		esferaTexto = "Municipal";
 	}
+	let tipoDocTexto;
+	if (TipoDoc.toLowerCase() === "loa") {
+		tipoDocTexto = "LOA";
+	} else if (TipoDoc.toLowerCase() === "ldo") {
+		tipoDocTexto = "LDO";
+	} else if (TipoDoc.toLowerCase() === "ppa") {
+		tipoDocTexto = "PPA";
+	} else if (TipoDoc.toLowerCase() === "termo_posse") {
+		tipoDocTexto = "Termo de Posse";
+	} else if (TipoDoc.toLowerCase() === "decretos") {
+		tipoDocTexto = "Decretos";
+	} else if (TipoDoc.toLowerCase() === "plano_governo") {
+		tipoDocTexto = "Plano de governo";
+	} else if (TipoDoc.toLowerCase() === "msg_anual") {
+		tipoDocTexto = "Mensagem Anual";
+	} else {
+		tipoDocTexto = TipoDoc;
+	}
 
 	filtrosDiv.innerHTML = `
 		<h3>Filtros Selecionados:</h3>
 		<p>Palavra-Chave: ${keyword}</p>
 		<p>Esfera: ${esferaTexto}</p>
+		<p>Tipo de Documento: ${tipoDocTexto}</p>
 		<p>Período: ${periodoTexto} </p>
 	`;
 }

@@ -124,15 +124,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelectorAll(".error-message").forEach((el) => el.remove());
 
 		switch (esferaValue) {
-			case "federal":
+			case "f":
 				judiciarioOption.style.display = "block";
 				break;
-			case "estadual":
+			case "e":
 				ufGroup.classList.remove("hidden");
 				judiciarioOption.style.display = "none";
 				loadUFs();
 				break;
-			case "municipal":
+			case "m":
 				ufGroup.classList.remove("hidden");
 				agrupamentoGroup.classList.remove("hidden");
 				judiciarioOption.style.display = "none";
