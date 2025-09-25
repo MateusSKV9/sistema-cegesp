@@ -35,17 +35,17 @@ const DatabaseService = {
 			throw err;
 		}
 	},
-
 	/**
-	 * Busca documentos com base na esfera e período.
+	 * Busca documentos com base na esfera, período e tipo de documento.
 	 *
 	 * @param {string} esfera - A esfera do documento ('f', 'e', 'm').
 	 * @param {number} [anoInicio = null] - O ano de início do período (opcional).
 	 * @param {number} [anoFim = null] - O ano de fim do período (opcional).
+	 * @param {string} [tipoDocumento = null] - O nome do tipo de documento (opcional).
 	 * @returns {Promise<string>} Uma promessa que resolve para uma string JSON formatada.
 	 * @throws {Error} Lança um erro se a validação ou a consulta falhar.
 	 */
-	async selecionarDocumentos(esfera, anoInicio = null, anoFim = null) {
+	async selecionarDocumentos(esfera, anoInicio = null, anoFim = null, tipoDocumento = null) {
 		if (!this.isInitialized) {
 			throw new Error("Banco de dados não inicializado.");
 		}
@@ -55,11 +55,11 @@ const DatabaseService = {
 
 		try {
 			const selectClause = `
-        SELECT
-          D.id, D.dado, D.ano,
-          TD.nome AS TipoDocumento,
-          PC.nome AS PalavraChave
-      `;
+      SELECT
+        D.id, D.dado, D.ano,
+        TD.nome AS TipoDocumento,
+        PC.nome AS PalavraChave
+    `;
 			let fromClause = "";
 			const whereConditions = [];
 			const params = {};
@@ -79,9 +79,9 @@ const DatabaseService = {
 			}
 
 			const commonJoins = `
-        LEFT JOIN TipoDocumento AS TD ON D.idTipoDocumento = TD.id
-        LEFT JOIN PalavraChave AS PC ON D.idPalavraChave = PC.id
-      `;
+      LEFT JOIN TipoDocumento AS TD ON D.idTipoDocumento = TD.id
+      LEFT JOIN PalavraChave AS PC ON D.idPalavraChave = PC.id
+    `;
 
 			if (anoInicio) {
 				whereConditions.push(`D.ano >= :anoInicio`);
@@ -90,6 +90,10 @@ const DatabaseService = {
 			if (anoFim) {
 				whereConditions.push(`D.ano <= :anoFim`);
 				params[":anoFim"] = anoFim;
+			}
+			if (tipoDocumento) {
+				whereConditions.push(`TD.nome = :tipoDocumento`);
+				params[":tipoDocumento"] = tipoDocumento;
 			}
 
 			const whereClause =
@@ -164,6 +168,15 @@ async function executarTestesRevisados() {
 	} catch (error) {
 		console.log("SUCESSO NO TESTE 4: O erro foi capturado como esperado.");
 		console.error("Mensagem do erro capturado:", error.message);
+	}
+
+	// Teste 5: Filtrando por tipo de documento
+	try {
+		console.log("\n[TESTE 5] Buscando documentos Municipais do tipo 'PPA':");
+		const resultadoJsonString = await DatabaseService.selecionarDocumentos("m", null, null, "PPA");
+		console.log(resultadoJsonString);
+	} catch (error) {
+		console.error("FALHA INESPERADA NO TESTE 5:", error.message);
 	}
 
 	console.log("\n--- FIM DOS TESTES DE CONSULTA ---");
