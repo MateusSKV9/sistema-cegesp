@@ -234,22 +234,25 @@ select {
 /*TAGS A SEGUIR INSERIDAS VIA JS INJECTION*/
 /*-----FILTROS------*/
 #filtrosSelecionados {
-	display: flex;
-	flex-direction: row;
-	gap: 5px;
-	vertical-align: auto;
-	margin-top: 30px;
+	.filtros-box {
+		display: flex;
+		flex-direction: row;
+		gap: 0.5vw;
+		vertical-align: auto;
+		margin-top: 3vw;
 
-	h3 {
-		margin-bottom: 0px;
-	}
+		h3 {
+			margin-bottom: 0px;
+		}
 
-	p {
-		margin-bottom: 4px;
-		background-color: #9aa9ff;
-		padding: 5px 10px;
-		border-radius: 20px;
-		color: white;
+		p {
+			margin-bottom: 0.444vw;
+			background-color: #9aa9ff;
+			padding: 0.5vw 1.11vw;
+			border-radius: 2.2vw;
+			color: white;
+			text-align: center;
+		}
 	}
 }
 

@@ -4,24 +4,35 @@ document.getElementById("infodadosForm").addEventListener("submit", function (e)
 	const esfera = document.getElementById("esfera").value;
 	const startYear = document.getElementById("start-year").value || null;
 	const endYear = document.getElementById("end-year").value || null;
-
 	const keyword = document.getElementById("keywordInput").value || null;
-	//const poder = document.querySelector('input[name="poder"]:checked')?.value || null;
 	const TipoDoc = document.getElementById("documento").value;
 
-	//mostrarFiltros({ palavraChave, esfera, poder, documento, startYear, endYear });
+	//converter para uppercase para match com o banco
+	let tipoDocBanco = TipoDoc.toUpperCase();
+
+	if (TipoDoc === "termo_posse") {
+		tipoDocBanco = "Termo Posse";
+	} else if (TipoDoc === "plano_governo") {
+		tipoDocBanco = "Plano de Governo";
+	} else if (TipoDoc === "msg_anual") {
+		tipoDocBanco = "Mensagem Anual";
+	}
+
+	console.log("Enviando para banco:", { esfera, startYear, endYear, tipoDocBanco });
 
 	mostrarFiltros({ keyword, esfera, startYear, endYear, TipoDoc });
 
-	DatabaseService.selecionarDocumentos(esfera, startYear, endYear, TipoDoc)
+	DatabaseService.selecionarDocumentos(esfera, startYear, endYear, tipoDocBanco)
 		.then((jsonString) => {
-			const dados = JSON.parse(jsonString); //transformar json em array de objetos
+			console.log("Resposta bruta:", jsonString);
+			const dados = JSON.parse(jsonString);
+			console.log("Dados parseados:", dados);
 			dados.sort((a, b) => b.ano - a.ano);
 			criarTabela(dados);
 		})
 		.catch((error) => {
-			console.error("Erro ao buscar dados:", error);
-			alert("Erro ao carregar dados.");
+			console.error("Erro completo:", error);
+			alert("Erro ao carregar dados: " + error.message);
 		});
 });
 
@@ -110,10 +121,12 @@ function mostrarFiltros({ keyword, esfera, startYear, endYear, TipoDoc }) {
 	}
 
 	filtrosDiv.innerHTML = `
+	<div class="filtros-box">
 		<h3>Filtros Selecionados:</h3>
 		<p>Palavra-Chave: ${keyword}</p>
 		<p>Esfera: ${esferaTexto}</p>
 		<p>Tipo de Documento: ${tipoDocTexto}</p>
 		<p>Período: ${periodoTexto} </p>
+	</div>
 	`;
 }
