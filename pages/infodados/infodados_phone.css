@@ -1,0 +1,45 @@
+@media (max-width: 600px) {
+	#filtrosSelecionados {
+		.filtros-box {
+			font-size: 4vw;
+			margin-top: 3vw;
+
+			h3 {
+				width: 100%;
+			}
+
+			p {
+				margin-bottom: 0.444vw;
+				padding: 0.5vw 1.11vw;
+				border-radius: 2.2vw;
+				flex: 0 0 auto;
+				min-width: 10vw;
+			}
+		}
+	}
+
+	#tabela-container {
+		width: 100%;
+		.tabela-dados {
+			border: 0;
+
+			thead {
+			}
+
+			tr {
+				margin-bottom: 0.7vw;
+				padding: 0.5vw;
+				border-radius: 0.6vw;
+			}
+
+			td {
+				border-bottom: 1px solid #ddd;
+				font-size: 3.2vw; /**/
+
+				&::before {
+					font-size: 3vw; /**/
+				}
+			}
+		}
+	}
+}
