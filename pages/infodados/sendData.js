@@ -29,6 +29,7 @@ document.getElementById("infodadosForm").addEventListener("submit", function (e)
 			console.log("Dados parseados:", dados);
 			dados.sort((a, b) => b.ano - a.ano);
 			criarTabela(dados);
+			dadosNulos(dados);
 		})
 		.catch((error) => {
 			console.error("Erro completo:", error);
@@ -129,4 +130,14 @@ function mostrarFiltros({ keyword, esfera, startYear, endYear, TipoDoc }) {
 		<p>Período: ${periodoTexto} </p>
 	</div>
 	`;
+}
+
+function dadosNulos(dados) {
+	if (dados.length === 0) {
+		const filtrosDiv = document.getElementById("filtrosSelecionados");
+		const container = document.getElementById("tabela-container");
+		filtrosDiv.innerHTML = "";
+		container.innerHTML = "<p>Nenhum dado encontrado para os filtros selecionados.</p>";
+		container.style.textAlign = "center";
+	}
 }

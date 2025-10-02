@@ -280,12 +280,12 @@ select {
 		}
 
 		td {
-			border: 1px solid #888888;
+			border: 1px solid #dedede;
 			padding: 8px;
 		}
 
 		tr:hover {
-			background-color: #bddeff;
+			background-color: #deefff;
 		}
 	}
 }

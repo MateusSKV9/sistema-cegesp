@@ -21,7 +21,8 @@
 
 		/*--------LABELS*/
 		.form-group label,
-		.form-group h3 {
+		.form-group,
+		.form-group label[for="documento"] {
 			margin-bottom: 1.04vw;
 			font-weight: 500;
 			font-size: 1.95vw;
@@ -185,16 +186,19 @@
 			}
 
 			tr {
-				border-bottom: 3px solid #ddd;
 				display: block;
-				margin-bottom: 0.7vw;
-				background: #f8f8f8;
+				margin-bottom: 3.7vw;
+				background: #e6e6e6;
 				padding: 0.5vw;
 				border-radius: 0.6vw;
+
+				&:hover {
+					background: #e6e6e6;
+				}
 			}
 
 			td {
-				border-bottom: 1px solid #ddd;
+				border: 1px solid #7d7d7d;
 				display: block;
 				font-size: 2.2vw; /**/
 				text-align: right;

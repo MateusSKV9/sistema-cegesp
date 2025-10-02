@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const territorioGroup = document.getElementById("territorioGroup");
 	const judiciarioOption = document.getElementById("judiciarioOption");
 	const agrupamentoRadios = document.getElementsByName("agrupamento");
+	const startYearInput = document.getElementById("start-year");
+	const endYearInput = document.getElementById("end-year");
 
 	// Jhon: Função de loading enquanto a API é requisitada
 	function toggleLoading(element, loading) {
@@ -168,11 +170,38 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	form.addEventListener("submit", function (e) {
-		e.preventDefault();
+		if (!validateYear()) {
+			e.preventDefault();
+			return;
+		}
 		console.log("Formulário enviado!");
 	});
 
 	updateFormFields();
+
+	function validateYear() {
+		const startYear = document.getElementById("start-year").value;
+		const endYear = document.getElementById("end-year").value;
+
+		const filtrosDiv = document.getElementById("filtrosSelecionados");
+		const tabelaContainer = document.getElementById("tabela-container");
+
+		if (startYear !== "" && endYear !== "") {
+			const anoInicio = parseInt(startYear);
+			const anoFim = parseInt(endYear);
+
+			// CASO INICIO MAIOR QUE FIM
+			if (anoInicio > anoFim) {
+				filtrosDiv.innerHTML = "";
+				tabelaContainer.innerHTML = "";
+				alert("O ano inicial não pode ser maior que o ano final!");
+
+				return false;
+			}
+		}
+
+		return true;
+	}
 });
 
 //Mensagem de erro caso não haja preenchimento
