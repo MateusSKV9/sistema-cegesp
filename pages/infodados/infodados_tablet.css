@@ -20,17 +20,24 @@
 		margin-bottom: 3.26vw;
 
 		/*--------LABELS*/
-		.form-group label,
-		.form-group,
-		.form-group label[for="documento"] {
+		h3,
+		label,
+		#docLabel,
+		#ufGroup label,
+		#municipioGroup label,
+		#territorioGroup label {
+			display: block;
+			font-family: var(--font-roboto-condensed);
 			margin-bottom: 1.04vw;
+			font-size: calc(var(--h3-text-size) * 0.2vw);
 			font-weight: 500;
-			font-size: 1.95vw;
 		}
-		label[for="documento"] {
-			margin-bottom: 1.04vw;
-			font-weight: 500;
-			font-size: 1.95vw;
+
+		#keywordInput {
+			width: 100%;
+			padding: 1.56vw 2.08vw;
+			border-radius: 0.78vw;
+			font-size: 2.7vw;
 		}
 	}
 
@@ -77,7 +84,7 @@
 			flex: 1;
 		}
 
-		input[type="date"] {
+		input[type="number"] {
 			width: 100%;
 			padding: 1.56vw 2.08vw;
 			border-radius: 0.78vw;
@@ -86,6 +93,7 @@
 
 		h3 {
 			margin-top: 2.22vw;
+			margin-bottom: 0;
 		}
 
 		label[for="start-date"],

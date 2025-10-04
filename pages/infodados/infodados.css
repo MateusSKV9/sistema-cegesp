@@ -35,15 +35,24 @@ main h2 {
 	background-color: #fff;
 
 	/*--------LABELS*/
-	.form-group label,
-	.form-group h3,
-	.form-group label[for="documento"] {
+	label,
+	h3 {
 		display: block;
 		margin-bottom: 8px;
 		font-size: 22px;
 		font-weight: 500;
 		color: var(--text-label);
 		background-color: #fff;
+	}
+	#docLabel,
+	#ufGroup label,
+	#municipioGroup label,
+	#territorioGroup label {
+		display: block;
+		margin-bottom: 8px;
+		font-family: var(--font-roboto);
+		font-size: calc(var(--h3-text-size) * 1px);
+		color: var(--text-label);
 	}
 }
 
